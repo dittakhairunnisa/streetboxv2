@@ -1,0 +1,5837 @@
+definitions:
+  entity.Canvassing:
+    properties:
+      cooldown:
+        type: integer
+      expire:
+        type: integer
+      interval:
+        type: integer
+      is_active:
+        type: boolean
+      last_auto_blast:
+        type: string
+      merchant_id:
+        type: integer
+      radius:
+        type: number
+    type: object
+  entity.CanvassingCall:
+    properties:
+      created_at:
+        type: string
+      customer_id:
+        type: integer
+      deleted_at:
+        type: string
+      foodtruck_id:
+        type: integer
+      id:
+        type: integer
+      notif_id:
+        type: integer
+      queue_no:
+        type: integer
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  entity.FoodtruckLocation:
+    properties:
+      foodtruck_id:
+        type: integer
+      latitude:
+        type: number
+      longitude:
+        type: number
+    type: object
+  entity.HomevisitSales:
+    properties:
+      available:
+        type: integer
+      createdAt:
+        type: string
+      deposit:
+        type: integer
+      endTime:
+        type: string
+      id:
+        type: integer
+      merchantId:
+        type: integer
+      startTime:
+        type: string
+      total:
+        type: integer
+      updatedAt:
+        type: string
+    type: object
+  entity.Merchant:
+    properties:
+      address:
+        type: string
+      banner:
+        type: string
+      categoryID:
+        type: integer
+      city:
+        type: string
+      createdAt:
+        type: string
+      email:
+        type: string
+      id:
+        type: integer
+      igAccount:
+        type: string
+      logo:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+      terms:
+        type: string
+      updatedAt:
+        type: string
+      xendit_id:
+        type: string
+    type: object
+  entity.MerchantCategory:
+    properties:
+      category:
+        type: string
+      hexcode:
+        type: string
+      id:
+        type: integer
+    type: object
+  entity.MerchantMenu:
+    properties:
+      createdAt:
+        type: string
+      description:
+        type: string
+      discount:
+        type: number
+      id:
+        type: integer
+      isActive:
+        type: boolean
+      isNearby:
+        type: boolean
+      isVisit:
+        type: boolean
+      merchantId:
+        type: integer
+      name:
+        type: string
+      photo:
+        type: string
+      price:
+        type: integer
+      qty:
+        type: integer
+      updatedAt:
+        type: string
+    type: object
+  entity.MerchantTax:
+    properties:
+      amount:
+        type: number
+      createdAt:
+        type: string
+      id:
+        type: integer
+      isActive:
+        type: boolean
+      merchantId:
+        type: integer
+      name:
+        type: string
+      type:
+        type: integer
+      updatedAt:
+        type: string
+    type: object
+  entity.MerchantUsersShift:
+    properties:
+      createdAt:
+        type: string
+      id:
+        type: integer
+      merchantUsersId:
+        type: integer
+      shift:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  entity.ParkingSpace:
+    properties:
+      address:
+        type: string
+      city:
+        type: string
+      createdAt:
+        type: string
+      description:
+        type: string
+      documentsMeta:
+        description: meta data binary file
+        items:
+          type: string
+        type: array
+      endContract:
+        type: string
+      endTime:
+        description: end operational time
+        type: string
+      id:
+        type: integer
+      imagesMeta:
+        description: meta data binary image
+        items:
+          type: string
+        type: array
+      landlordInfo:
+        type: string
+      latitude:
+        type: number
+      longitude:
+        type: number
+      name:
+        type: string
+      rating:
+        description: superadmin
+        type: number
+      startContract:
+        type: string
+      startTime:
+        description: start operational time
+        type: string
+      totalSpace:
+        type: integer
+      updatedAt:
+        type: string
+    type: object
+  entity.ParkingSpaceSales:
+    properties:
+      availableSlot:
+        type: integer
+      createdAt:
+        type: string
+      endDate:
+        description: date
+        type: string
+      id:
+        type: integer
+      parkingSpaceId:
+        description: foreign key
+        type: integer
+      point:
+        type: integer
+      startDate:
+        description: date
+        type: string
+      totalSlot:
+        type: integer
+      updatedAt:
+        type: string
+    type: object
+  entity.Role:
+    properties:
+      createdAt:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  entity.Tasks:
+    properties:
+      createdAt:
+        type: string
+      id:
+        type: integer
+      merchantUsersId:
+        type: integer
+      status:
+        type: integer
+      types:
+        description: REGULAR, NONREGULAR, HOMEVISIT
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  entity.TasksNonregularLog:
+    properties:
+      activity:
+        type: integer
+      address:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      latitude:
+        type: number
+      longitude:
+        type: number
+      tasksNonregularId:
+        type: integer
+      updatedAt:
+        type: string
+    type: object
+  entity.TasksRegularLog:
+    properties:
+      activity:
+        type: integer
+      createdAt:
+        type: string
+      id:
+        type: integer
+      latitude:
+        type: number
+      longitude:
+        type: number
+      tasksRegularId:
+        type: integer
+      updatedAt:
+        type: string
+    type: object
+  entity.Trx:
+    properties:
+      address:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: string
+      qrCode:
+        type: string
+      status:
+        description: UNPAID;PAID;COMPLETED;FAILED;CANCEL;VOID?
+        type: string
+      types:
+        description: ORDER; VISIT
+        type: string
+      updatedAt:
+        type: string
+      usersId:
+        type: integer
+    type: object
+  entity.TrxSync:
+    properties:
+      businessDate:
+        type: string
+      data:
+        type: string
+      id:
+        type: integer
+      merchantId:
+        type: integer
+      status:
+        type: integer
+      syncDate:
+        type: string
+      uniqueId:
+        type: string
+    type: object
+  entity.TrxVisit:
+    properties:
+      address:
+        type: string
+      createdAt:
+        type: string
+      customerName:
+        type: string
+      grandTotal:
+        type: number
+      id:
+        type: integer
+      latitude:
+        type: number
+      longitude:
+        type: number
+      notes:
+        type: string
+      paymentMethodId:
+        type: integer
+      phone:
+        type: string
+      trxId:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  entity.Users:
+    properties:
+      address:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      phone:
+        type: string
+      platNo:
+        type: string
+      profilePicture:
+        type: string
+      updatedAt:
+        type: string
+      userName:
+        type: string
+    type: object
+  entity.UsersAddress:
+    properties:
+      address:
+        type: string
+      address_name:
+        type: string
+      id:
+        type: integer
+      latitude:
+        type: number
+      longitude:
+        type: number
+      person:
+        type: string
+      phone:
+        type: string
+      primary:
+        type: boolean
+      user_id:
+        type: integer
+    type: object
+  entity.UsersConfig:
+    properties:
+      radius:
+        type: integer
+    type: object
+  entity.UsersLocation:
+    properties:
+      latitude:
+        type: number
+      longitude:
+        type: number
+      user_id:
+        type: integer
+    type: object
+  model.AppSetting:
+    properties:
+      id:
+        type: integer
+      key:
+        type: string
+      value:
+        type: string
+    type: object
+  model.Menu:
+    properties:
+      menu_id:
+        type: integer
+      quantity:
+        type: integer
+    type: object
+  model.Merchant:
+    properties:
+      address:
+        type: string
+      banner:
+        type: string
+      category:
+        type: string
+      categoryID:
+        type: integer
+      city:
+        type: string
+      createdAt:
+        type: string
+      email:
+        type: string
+      hexcode:
+        type: string
+      id:
+        type: integer
+      igAccount:
+        type: string
+      logo:
+        type: string
+      merchantUsersId:
+        type: integer
+      name:
+        type: string
+      phone:
+        type: string
+      terms:
+        type: string
+      updatedAt:
+        type: string
+      xendit_id:
+        type: string
+    type: object
+  model.MerchantTax:
+    properties:
+      amount:
+        type: number
+      isActive:
+        type: boolean
+      name:
+        type: string
+      type:
+        type: integer
+    required:
+    - amount
+    - isActive
+    - name
+    - type
+    type: object
+  model.Pagination:
+    properties:
+      data:
+        type: object
+      limit:
+        type: integer
+      nextPage:
+        type: integer
+      offset:
+        type: integer
+      page:
+        type: integer
+      prevPage:
+        type: integer
+      totalPages:
+        type: integer
+      totalRecords:
+        type: integer
+    type: object
+  model.ReqBatchCreateHomevisitSales:
+    properties:
+      request:
+        items:
+          $ref: '#/definitions/model.ReqCreateHomevisitSales'
+        type: array
+    type: object
+  model.ReqChangePassword:
+    properties:
+      password:
+        type: string
+    required:
+    - password
+    type: object
+  model.ReqCreateFoodtruck:
+    properties:
+      address:
+        type: string
+      phone:
+        type: string
+      platNo:
+        type: string
+      userName:
+        type: string
+    required:
+    - userName
+    type: object
+  model.ReqCreateHomeDetailVisitSales:
+    properties:
+      endTime:
+        type: string
+      numberOfFoodtruck:
+        type: integer
+      startTime:
+        type: string
+    required:
+    - endTime
+    - numberOfFoodtruck
+    - startTime
+    type: object
+  model.ReqCreateHomevisitSales:
+    properties:
+      date:
+        type: string
+      deposit:
+        type: integer
+      summary:
+        items:
+          $ref: '#/definitions/model.ReqCreateHomeDetailVisitSales'
+        type: array
+    required:
+    - date
+    - deposit
+    type: object
+  model.ReqCreateMerchant:
+    properties:
+      address:
+        type: string
+      categoryID:
+        type: integer
+      city:
+        type: string
+      email:
+        type: string
+      igAccount:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+      terms:
+        type: string
+    required:
+    - address
+    - email
+    - name
+    - phone
+    type: object
+  model.ReqCreateMerchantMenu:
+    properties:
+      description:
+        type: string
+      discount:
+        type: number
+      isActive:
+        type: boolean
+      isNearby:
+        type: boolean
+      isVisit:
+        type: boolean
+      name:
+        type: string
+      price:
+        type: integer
+      qty:
+        type: integer
+    required:
+    - name
+    - price
+    - qty
+    type: object
+  model.ReqCreateSyncTrx:
+    properties:
+      businessDate:
+        type: integer
+      data:
+        type: string
+      syncDate:
+        type: integer
+      uniqueId:
+        type: string
+    required:
+    - businessDate
+    - data
+    - syncDate
+    - uniqueId
+    type: object
+  model.ReqCreateTasksHomevisit:
+    properties:
+      trxVisitSalesId:
+        type: integer
+      usersId:
+        description: foodtruck
+        type: integer
+    required:
+    - trxVisitSalesId
+    - usersId
+    type: object
+  model.ReqCreateTasksTracking:
+    properties:
+      latitude:
+        type: number
+      longitude:
+        type: number
+      tasksId:
+        type: integer
+    type: object
+  model.ReqCreateTrxSales:
+    properties:
+      merchantId:
+        type: integer
+      parkingSpaceSalesId:
+        type: integer
+      totalSlot:
+        type: integer
+    required:
+    - merchantId
+    - parkingSpaceSalesId
+    - totalSlot
+    type: object
+  model.ReqCreateVisitTrx:
+    properties:
+      address:
+        type: string
+      customerName:
+        type: string
+      grandTotal:
+        type: number
+      latitude:
+        type: number
+      longitude:
+        type: number
+      notes:
+        type: string
+      paymentMethodId:
+        type: integer
+      phone:
+        type: string
+      trxId:
+        type: string
+      visitSales:
+        items:
+          $ref: '#/definitions/model.Visit'
+        type: array
+    required:
+    - address
+    - customerName
+    - grandTotal
+    - latitude
+    - longitude
+    - notes
+    - paymentMethodId
+    - phone
+    - trxId
+    - visitSales
+    type: object
+  model.ReqDeleteAsset:
+    properties:
+      filename:
+        type: string
+    required:
+    - filename
+    type: object
+  model.ReqRefundHomeVisit:
+    properties:
+      amount:
+        type: integer
+      id:
+        type: integer
+    required:
+    - amount
+    - id
+    type: object
+  model.ReqRefundParkingSpaceSales:
+    properties:
+      amount:
+        type: integer
+      trxParkingSpaceSalesId:
+        type: integer
+    required:
+    - amount
+    - trxParkingSpaceSalesId
+    type: object
+  model.ReqResetPassword:
+    properties:
+      userName:
+        type: string
+    required:
+    - userName
+    type: object
+  model.ReqRoleCreate:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+    required:
+    - description
+    - name
+    type: object
+  model.ReqSalesUpdate:
+    properties:
+      availableSlot:
+        type: integer
+      parkingSpaceId:
+        type: integer
+      point:
+        type: integer
+      totalSlot:
+        type: integer
+    type: object
+  model.ReqTasksNonRegLog:
+    properties:
+      address:
+        type: string
+      latitude:
+        type: number
+      longitude:
+        type: number
+      tasksId:
+        type: integer
+    required:
+    - address
+    - latitude
+    - longitude
+    - tasksId
+    type: object
+  model.ReqTasksRegLog:
+    properties:
+      latitude:
+        type: number
+      longitude:
+        type: number
+      parkingSpaceName:
+        type: string
+      tasksId:
+        type: integer
+      typesId:
+        type: integer
+    required:
+    - latitude
+    - longitude
+    - parkingSpaceName
+    - tasksId
+    - typesId
+    type: object
+  model.ReqTasksVisitLog:
+    properties:
+      customerName:
+        type: string
+      latitude:
+        type: number
+      longitude:
+        type: number
+      tasksId:
+        type: integer
+      typesId:
+        type: integer
+    required:
+    - customerName
+    - latitude
+    - longitude
+    - tasksId
+    - typesId
+    type: object
+  model.ReqTrxOrderOnline:
+    properties:
+      order:
+        $ref: '#/definitions/model.TrxOrder'
+      orderBills:
+        items:
+          $ref: '#/definitions/model.TrxOrderBill'
+        type: array
+      paymentSales:
+        items:
+          $ref: '#/definitions/model.TrxOrderPaymentSales'
+        type: array
+      productSales:
+        items:
+          $ref: '#/definitions/model.TrxOrderProductSales'
+        type: array
+      taxSales:
+        items:
+          $ref: '#/definitions/model.TrxOrderTaxSales'
+        type: array
+      trxId:
+        type: string
+    type: object
+  model.ReqUpdateAppSettingByKey:
+    properties:
+      value:
+        type: string
+    type: object
+  model.ReqUpdateHomeDetailVisitSales:
+    properties:
+      endTime:
+        type: string
+      id:
+        type: integer
+      numberOfFoodtruck:
+        type: integer
+      startTime:
+        type: string
+    required:
+    - endTime
+    - id
+    - numberOfFoodtruck
+    - startTime
+    type: object
+  model.ReqUpdateHomevisitSales:
+    properties:
+      date:
+        type: string
+      deposit:
+        type: integer
+      summary:
+        items:
+          $ref: '#/definitions/model.ReqUpdateHomeDetailVisitSales'
+        type: array
+    required:
+    - date
+    - deposit
+    - summary
+    type: object
+  model.ReqUpdateMerchant:
+    properties:
+      address:
+        type: string
+      categoryID:
+        type: integer
+      city:
+        type: string
+      email:
+        type: string
+      igAccount:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+      terms:
+        type: string
+      xendit_id:
+        type: string
+    type: object
+  model.ReqUpdateMerchantMenu:
+    properties:
+      description:
+        type: string
+      discount:
+        type: number
+      isActive:
+        type: boolean
+      isNearby:
+        type: boolean
+      isVisit:
+        type: boolean
+      name:
+        type: string
+      price:
+        type: integer
+      qty:
+        type: integer
+    required:
+    - name
+    - price
+    - qty
+    type: object
+  model.ReqUserCreate:
+    properties:
+      roleId:
+        type: integer
+      userName:
+        type: string
+    required:
+    - roleId
+    - userName
+    type: object
+  model.ReqUserLogin:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  model.ReqUserLoginGoogle:
+    properties:
+      idToken:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+      profilePicture:
+        type: string
+    required:
+    - idToken
+    type: object
+  model.ReqUserUpdate:
+    properties:
+      address:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+      platNo:
+        type: string
+    type: object
+  model.ReqXenditGenerateSubAccount:
+    properties:
+      email:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+    required:
+    - email
+    - id
+    - name
+    type: object
+  model.ReqXndQRIS:
+    properties:
+      external_id:
+        type: string
+      id:
+        type: string
+      qr_string:
+        type: string
+      type:
+        type: string
+    type: object
+  model.ReqXndQRISCallback:
+    properties:
+      amount:
+        type: integer
+      created:
+        type: string
+      event:
+        type: string
+      id:
+        type: string
+      qr_code:
+        $ref: '#/definitions/model.ReqXndQRIS'
+      status:
+        type: string
+    type: object
+  model.ResCountFoodtruck:
+    properties:
+      foodtrucks:
+        type: integer
+    type: object
+  model.ResCreateQRIS:
+    properties:
+      amount:
+        type: integer
+      callbackUrl:
+        type: string
+      createdAt:
+        type: string
+      id:
+        description: Unique ID from xendit
+        type: string
+      qrCode:
+        type: string
+      status:
+        type: string
+      trxId:
+        type: string
+      type:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  model.ResGetFoodtruckTasks:
+    properties:
+      address:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      phone:
+        type: string
+      platNo:
+        type: string
+      status:
+        type: integer
+      tasksId:
+        type: integer
+      updatedAt:
+        type: string
+      userName:
+        type: string
+    type: object
+  model.ResHomeVisitBookingDetailTimeNew:
+    properties:
+      address:
+        type: string
+      customerName:
+        type: string
+      deposit:
+        type: integer
+      endDate:
+        type: string
+      id:
+        type: integer
+      menus:
+        items:
+          $ref: '#/definitions/model.ResMenu'
+        type: array
+      notes:
+        type: string
+      phone1:
+        type: string
+      phone2:
+        type: string
+      startDate:
+        type: string
+      status:
+        type: string
+    type: object
+  model.ResHomeVisitBookingList:
+    properties:
+      customerName:
+        type: string
+      deposit:
+        type: integer
+      endDate:
+        type: string
+      id:
+        type: integer
+      startDate:
+        type: string
+      status:
+        type: string
+    type: object
+  model.ResHomeVisitDetails:
+    properties:
+      endTime:
+        type: string
+      id:
+        type: integer
+      numberOfFoodtruck:
+        type: integer
+      startTime:
+        type: string
+    type: object
+  model.ResHomeVisitGetInfo:
+    properties:
+      date:
+        type: string
+      deposit:
+        type: integer
+      summary:
+        items:
+          $ref: '#/definitions/model.ResHomeVisitDetails'
+        type: array
+    type: object
+  model.ResLiveTracking:
+    properties:
+      banner:
+        type: string
+      distance:
+        type: number
+      latitude:
+        type: number
+      logTime:
+        type: string
+      logo:
+        type: string
+      longitude:
+        type: number
+      merchantIG:
+        type: string
+      merchantId:
+        type: integer
+      merchantName:
+        type: string
+      status:
+        type: integer
+      tasksId:
+        type: integer
+      types:
+        type: string
+    type: object
+  model.ResMenu:
+    properties:
+      name:
+        type: string
+      quantity:
+        type: integer
+    type: object
+  model.ResMyParkingList:
+    properties:
+      address:
+        type: string
+      description:
+        type: string
+      endTime:
+        type: string
+      id:
+        type: integer
+      images:
+        items:
+          type: string
+        type: array
+      latitude:
+        type: number
+      longitude:
+        type: number
+      name:
+        type: string
+      profilePicture:
+        type: string
+      rating:
+        type: number
+      startTime:
+        type: string
+      trxVisitSalesId:
+        type: integer
+    type: object
+  model.ResMyTasksNonReg:
+    properties:
+      address:
+        type: string
+      latParkingSpace:
+        type: number
+      lonParkingSpace:
+        type: number
+      status:
+        type: integer
+      tasksId:
+        type: integer
+    type: object
+  model.ResMyTasksReg:
+    properties:
+      address:
+        type: string
+      endDate:
+        type: string
+      latParkingSpace:
+        type: number
+      lonParkingSpace:
+        type: number
+      name:
+        type: string
+      scheduleDate:
+        type: string
+      startDate:
+        type: string
+      status:
+        type: integer
+      tasksId:
+        type: integer
+      types:
+        type: string
+      typesId:
+        type: integer
+    type: object
+  model.ResParkingSpace:
+    properties:
+      address:
+        type: string
+      distance:
+        type: string
+      id:
+        type: integer
+      isCheckin:
+        type: boolean
+      latitude:
+        type: number
+      longitude:
+        type: number
+      name:
+        type: string
+    type: object
+  model.ResParkingSpaceDetail:
+    properties:
+      address:
+        type: string
+      banner:
+        type: string
+      isCheckin:
+        type: boolean
+      logo:
+        type: string
+      merchantIG:
+        type: string
+      merchantId:
+        type: integer
+      merchantName:
+        type: string
+      schedules:
+        items:
+          $ref: '#/definitions/model.Schedules'
+        type: array
+    type: object
+  model.ResPaymentMethod:
+    properties:
+      id:
+        type: integer
+      isActive:
+        type: boolean
+      name:
+        type: string
+      providerName:
+        type: string
+      type:
+        type: integer
+    type: object
+  model.ResQRIS:
+    properties:
+      id:
+        type: string
+      qrString:
+        type: string
+      trxId:
+        type: string
+      type:
+        type: string
+    type: object
+  model.ResSimulateQR:
+    properties:
+      amount:
+        type: integer
+      created:
+        type: string
+      id:
+        type: string
+      qrCode:
+        $ref: '#/definitions/model.ResQRIS'
+      status:
+        type: string
+    type: object
+  model.ResSlotMyParking:
+    properties:
+      endDate:
+        type: string
+      id:
+        type: integer
+      startDate:
+        type: string
+      totalSlot:
+        type: integer
+    type: object
+  model.ResTasksTracking:
+    properties:
+      latitude:
+        type: number
+      logTime:
+        type: string
+      longitude:
+        type: number
+      status:
+        type: integer
+      tasksId:
+        type: integer
+    type: object
+  model.ResTrx:
+    properties:
+      id:
+        type: string
+    type: object
+  model.ResTrxList:
+    properties:
+      endDate:
+        type: string
+      id:
+        type: integer
+      merchantName:
+        type: string
+      point:
+        type: integer
+      spaceName:
+        type: string
+      startDate:
+        type: string
+      status:
+        type: string
+      totalSlot:
+        type: integer
+    type: object
+  model.ResTrxOnlineClosed:
+    properties:
+      billNo:
+        type: string
+      businessDate:
+        type: string
+      createdAt:
+        type: string
+      externalID:
+        type: string
+      grandTotal:
+        type: number
+      id:
+        type: integer
+      isClose:
+        type: boolean
+      merchantUsersId:
+        type: integer
+      note:
+        type: string
+      orderNo:
+        type: string
+      paymentMethod:
+        type: string
+      paymentMethodId:
+        type: string
+      paymentMethodName:
+        type: string
+      totalDiscount:
+        type: number
+      trxId:
+        type: string
+      typeOrder:
+        type: string
+      typePayment:
+        type: string
+      types:
+        description: '0: Offline 1: Online'
+        type: integer
+      uniqueId:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  model.ResTrxOrderList:
+    properties:
+      order:
+        items:
+          $ref: '#/definitions/model.TrxOrder'
+        type: array
+      orderBills:
+        items:
+          $ref: '#/definitions/model.TrxOrderBill'
+        type: array
+      paymentSales:
+        items:
+          $ref: '#/definitions/model.TrxOrderPaymentSales'
+        type: array
+      productSales:
+        items:
+          $ref: '#/definitions/model.TrxOrderProductSales'
+        type: array
+      taxSales:
+        items:
+          $ref: '#/definitions/model.TrxOrderTaxSales'
+        type: array
+      trx:
+        items:
+          $ref: '#/definitions/model.Trx'
+        type: array
+    type: object
+  model.ResUserAll:
+    properties:
+      address:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      phone:
+        type: string
+      platNo:
+        type: string
+      profilePicture:
+        type: string
+      roleId:
+        type: integer
+      roleName:
+        type: string
+      updatedAt:
+        type: string
+      userName:
+        type: string
+    type: object
+  model.ResUserMerchant:
+    properties:
+      merchantId:
+        type: integer
+      merchantName:
+        type: string
+      username:
+        type: string
+      usersId:
+        type: integer
+    type: object
+  model.ResVisitSales:
+    properties:
+      address:
+        type: string
+      banner:
+        type: string
+      category:
+        type: string
+      categoryColor:
+        type: string
+      city:
+        type: string
+      id:
+        type: integer
+      logo:
+        type: string
+      merchantIG:
+        type: string
+      merchantName:
+        type: string
+      terms:
+        type: string
+    type: object
+  model.ResVisitSalesDetail:
+    properties:
+      deposit:
+        type: integer
+      endDate:
+        description: timestamp
+        type: string
+      id:
+        type: integer
+      startDate:
+        description: timestamp
+        type: string
+    type: object
+  model.RespCallsByFoodtruckID:
+    properties:
+      created_at:
+        type: string
+      customer_id:
+        type: integer
+      deleted_at:
+        type: string
+      foodtruck_id:
+        type: integer
+      id:
+        type: integer
+      latitude_foodtruck:
+        type: number
+      latitude_user:
+        type: number
+      longitude_foodtruck:
+        type: number
+      longitude_user:
+        type: number
+      name:
+        type: string
+      notif_id:
+        type: integer
+      phone:
+        type: string
+      profile_picture:
+        type: string
+      queue_no:
+        type: integer
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  model.RespCallsByUserID:
+    properties:
+      created_at:
+        type: string
+      customer_id:
+        type: integer
+      deleted_at:
+        type: string
+      foodtruck_id:
+        type: integer
+      id:
+        type: integer
+      ig_account:
+        type: string
+      latitude_foodtruck:
+        type: number
+      latitude_user:
+        type: number
+      logo:
+        type: string
+      longitude_foodtruck:
+        type: number
+      longitude_user:
+        type: number
+      name:
+        type: string
+      notif_id:
+        type: integer
+      phone:
+        type: string
+      plat_no:
+        type: string
+      queue_no:
+        type: integer
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  model.RespCanvassing:
+    properties:
+      cooldown:
+        type: integer
+      expire:
+        type: integer
+      interval:
+        type: integer
+      is_active:
+        type: boolean
+      is_auto_blast:
+        type: boolean
+      last_auto_blast:
+        type: string
+      last_blast:
+        type: string
+      merchant_id:
+        type: integer
+      radius:
+        type: number
+    type: object
+  model.RespNotifByUserID:
+    properties:
+      created_at:
+        type: string
+      customer_id:
+        type: integer
+      foodtruck_id:
+        type: integer
+      id:
+        type: integer
+      ig_account:
+        type: string
+      latitude_foodtruck:
+        type: number
+      latitude_user:
+        type: number
+      logo:
+        type: string
+      longitude_foodtruck:
+        type: number
+      longitude_user:
+        type: number
+      name:
+        type: string
+      plat_no:
+        type: string
+      status:
+        type: string
+    type: object
+  model.ResponseErrors:
+    properties:
+      error:
+        $ref: '#/definitions/model.errorResponse'
+    type: object
+  model.ResponseSuccess:
+    properties:
+      data:
+        type: object
+    type: object
+  model.Schedules:
+    properties:
+      endDate:
+        type: string
+      salesId:
+        type: integer
+      startDate:
+        type: string
+    type: object
+  model.Trx:
+    properties:
+      address:
+        type: string
+      createdAt:
+        type: string
+      deletedAt:
+        type: string
+      externalId:
+        type: string
+      id:
+        type: string
+      qrCode:
+        type: string
+      status:
+        type: string
+      trxId:
+        type: string
+      types:
+        type: string
+      updatedAt:
+        type: string
+      userId:
+        type: integer
+    type: object
+  model.TrxOrder:
+    properties:
+      billNo:
+        type: string
+      businessDate:
+        type: integer
+      createdAt:
+        type: integer
+      grandTotal:
+        type: number
+      id:
+        type: integer
+      isClose:
+        type: boolean
+      merchantUsersId:
+        type: integer
+      note:
+        type: string
+      orderNo:
+        type: string
+      paymentMethodId:
+        type: string
+      paymentMethodName:
+        type: string
+      totalDiscount:
+        type: number
+      trxId:
+        type: string
+      typeOrder:
+        type: string
+      typePayment:
+        type: string
+      types:
+        type: integer
+      uniqueId:
+        type: string
+      updatedAt:
+        type: integer
+      userId:
+        type: integer
+    type: object
+  model.TrxOrderBill:
+    properties:
+      billNo:
+        type: string
+      businessDate:
+        type: integer
+      createdAt:
+        type: integer
+      grandTotal:
+        type: number
+      id:
+        type: integer
+      isClose:
+        type: boolean
+      orderUniqueId:
+        type: string
+      subTotal:
+        type: number
+      totalDiscount:
+        type: number
+      totalTax:
+        type: number
+      uniqueId:
+        type: string
+      updatedAt:
+        type: integer
+    type: object
+  model.TrxOrderPaymentSales:
+    properties:
+      amount:
+        type: number
+      createdAt:
+        type: integer
+      id:
+        type: integer
+      name:
+        type: string
+      orderBillUniqueId:
+        type: string
+      orderUniqueId:
+        type: string
+      paymentMethodId:
+        type: integer
+      uniqueId:
+        type: string
+      updatedAt:
+        type: integer
+    type: object
+  model.TrxOrderProductSales:
+    properties:
+      businessDate:
+        type: integer
+      createdAt:
+        type: integer
+      id:
+        type: integer
+      name:
+        type: string
+      notes:
+        type: string
+      orderBillUniqueId:
+        type: string
+      orderUniqueId:
+        type: string
+      price:
+        type: number
+      productId:
+        type: integer
+      qrCode:
+        type: string
+      qty:
+        type: integer
+      uniqueId:
+        type: string
+      updatedAt:
+        type: integer
+    type: object
+  model.TrxOrderTaxSales:
+    properties:
+      amount:
+        type: number
+      createdAt:
+        type: integer
+      id:
+        type: integer
+      merchantTaxId:
+        type: integer
+      name:
+        type: string
+      orderBillUniqueId:
+        type: string
+      orderUniqueId:
+        type: string
+      type:
+        type: integer
+      uniqueId:
+        type: string
+      updatedAt:
+        type: integer
+    type: object
+  model.Visit:
+    properties:
+      deposit:
+        type: integer
+      menus:
+        items:
+          $ref: '#/definitions/model.Menu'
+        type: array
+      salesId:
+        type: integer
+    required:
+    - deposit
+    - menus
+    - salesId
+    type: object
+  model.errorResponse:
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /appsetting/get-by-key/:key:
+    get:
+      operationId: GetByKey
+      parameters:
+      - default: '"nearby_radius"'
+        description: ' '
+        in: query
+        name: key
+        type: string
+      responses:
+        "200":
+          description: 'data: model.AppSetting'
+          schema:
+            $ref: '#/definitions/model.AppSetting'
+      security:
+      - Token: []
+      summary: Get App Setting Value (permission = all)
+      tags:
+      - AppSetting
+  /appsetting/update-by-key/:key:
+    post:
+      operationId: UpdateByKey
+      parameters:
+      - default: '"nearby_radius"'
+        description: ' '
+        in: query
+        name: key
+        type: string
+      - description: Update AppSetting
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqUpdateAppSettingByKey'
+      responses:
+        "200":
+          description: 'data: model.AppSetting'
+          schema:
+            $ref: '#/definitions/model.AppSetting'
+      security:
+      - Token: []
+      summary: Update App Setting Value (permission = superadmin)
+      tags:
+      - AppSetting
+  /canvassing:
+    get:
+      operationId: GetCanvas
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.Canvassing'
+        "500":
+          description: Inquiry Canvassing Rule Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get Admin's Canvassing Rule (permission = admin)
+      tags:
+      - Canvassing
+    post:
+      operationId: CreateCanvass
+      parameters:
+      - description: merchant_id and last_auto_blast fields are not mandatory
+        in: body
+        name: canvassing
+        required: true
+        schema:
+          $ref: '#/definitions/entity.Canvassing'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.Canvassing'
+        "422":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Create Canvassing Rule Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create Canvassing Rule (permission = admin)
+      tags:
+      - Canvassing
+    put:
+      operationId: UpdateCanvass
+      parameters:
+      - description: merchant_id and last_auto_blast fields are not mandatory
+        in: body
+        name: canvassing
+        required: true
+        schema:
+          $ref: '#/definitions/entity.Canvassing'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.Canvassing'
+        "422":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Update Canvassing Rule Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Foodtruck's Canvassing Rule (permission = admin)
+      tags:
+      - Canvassing
+  /canvassing/blast:
+    post:
+      operationId: Blast
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: No users nearby
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Blast Canvassing Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Blast Notification to Users Nearby Manually (permission = merchant)
+      tags:
+      - Canvassing
+  /canvassing/call-status/:call-id/:status:
+    put:
+      operationId: UpdateStatusCall
+      parameters:
+      - description: "1"
+        in: path
+        name: call-id
+        required: true
+        type: string
+      - description: onprocess/accept/reject/expire
+        in: path
+        name: status
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.CanvassingCall'
+        "500":
+          description: Call Status Updated Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Status Call From Consumer (permission = merchant)
+      tags:
+      - Canvassing
+  /canvassing/call/:call-id/:status:
+    put:
+      operationId: AnswerCall
+      parameters:
+      - description: "1"
+        in: path
+        name: call-id
+        required: true
+        type: string
+      - description: onprocess/accept/reject/expire
+        in: path
+        name: status
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.CanvassingCall'
+        "500":
+          description: Answer Consumer Call Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Answer Call From Consumer (permission = merchant)
+      tags:
+      - Canvassing
+  /canvassing/call/:notif-id:
+    post:
+      operationId: CallFoodtruck
+      parameters:
+      - description: "1"
+        in: path
+        name: notif-id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: Calling Foodtruck Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Call Foodtruck (permission = consumer)
+      tags:
+      - Canvassing
+  /canvassing/calls:
+    get:
+      operationId: GetCallsByCustomerID
+      parameters:
+      - description: accept/request/history
+        in: query
+        name: status
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            items:
+              $ref: '#/definitions/model.RespCallsByUserID'
+            type: array
+        "500":
+          description: Inquiry Calls Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Inquiry Customer's Calls (permission = consumer)
+      tags:
+      - Canvassing
+  /canvassing/finish/:call-id:
+    put:
+      operationId: FinishCall
+      parameters:
+      - description: "1"
+        in: path
+        name: call-id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: Finish Consumer Call Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Finish Call From Consumer (permission = merchant)
+      tags:
+      - Canvassing
+  /canvassing/foodtruck:
+    get:
+      operationId: GetFoodtruckCanvas
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/model.RespCanvassing'
+        "500":
+          description: Inquiry Canvassing Rule Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get Foodtruck's Canvassing Rule (permission = merchant)
+      tags:
+      - Canvassing
+  /canvassing/foodtruck/calls:
+    get:
+      operationId: GetCallsByFoodtruckID
+      parameters:
+      - description: onprocess/accept/request/history
+        in: query
+        name: status
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            items:
+              $ref: '#/definitions/model.RespCallsByFoodtruckID'
+            type: array
+        "500":
+          description: Inquiry Calls Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Inquiry Foodtruck's Calls (permission = merchant)
+      tags:
+      - Canvassing
+  /canvassing/foodtruck/location:
+    put:
+      operationId: UpdateFoodtruckLocation
+      parameters:
+      - description: id fields are not mandatory
+        in: body
+        name: location
+        required: true
+        schema:
+          $ref: '#/definitions/entity.FoodtruckLocation'
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Update Foodtruck Location Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Foodtruck's Location (permission = merchant)
+      tags:
+      - Canvassing
+  /canvassing/foodtruck/location/:id:
+    get:
+      operationId: GetFoodtruckLocation
+      parameters:
+      - description: "1"
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.FoodtruckLocation'
+        "500":
+          description: Inquiry Foodtruck Location Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get Foodtruck's Location (permission = all)
+      tags:
+      - Canvassing
+  /canvassing/notifications:
+    get:
+      operationId: GetNotifications
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            items:
+              $ref: '#/definitions/model.RespNotifByUserID'
+            type: array
+        "500":
+          description: Inquiry Notifications Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Inquiry Users' Notifications (permission = consumer)
+      tags:
+      - Canvassing
+  /canvassing/toggle/auto:
+    put:
+      operationId: ToggleAutoBlast
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Toggle Foodtruck Auto Blast (permission = merchant)
+      tags:
+      - Canvassing
+  /canvassing/users/location:
+    put:
+      operationId: UpdateUsersLocation
+      parameters:
+      - description: id fields are not mandatory
+        in: body
+        name: location
+        required: true
+        schema:
+          $ref: '#/definitions/entity.UsersLocation'
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Update Users Location Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Users's Location (permission = consumer)
+      tags:
+      - Canvassing
+  /canvassing/users/location/:
+    get:
+      operationId: GetUserLocation
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.UsersLocation'
+        "500":
+          description: Inquiry User's Location Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get User's Location (permission = consumer)
+      tags:
+      - Canvassing
+  /check:
+    get:
+      operationId: CheckToken
+      parameters:
+      - description: token reset
+        in: query
+        name: token
+        required: true
+        type: string
+      summary: Check Token Forget Password
+      tags:
+      - Authorization
+  /consumer/home/map/livetracking/{lat}/{lon}:
+    get:
+      operationId: LiveTracking
+      parameters:
+      - description: Latitude
+        in: path
+        name: lat
+        required: true
+        type: number
+      - description: Longitude
+        in: path
+        name: lon
+        required: true
+        type: number
+      - default: "10"
+        description: KM
+        in: query
+        name: distance
+        type: string
+      responses:
+        "200":
+          description: 'data: []model.ResLiveTracking'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResLiveTracking'
+            type: array
+      security:
+      - Token: []
+      summary: Live Tracking Foodtruck Nearby on Maps  (permission = consumer)
+      tags:
+      - End User
+  /consumer/home/map/parking-space/{lat}/{lon}:
+    get:
+      operationId: MapParkingSpace
+      parameters:
+      - description: Latitude Consumer
+        in: path
+        name: lat
+        required: true
+        type: number
+      - description: Longitude Consumer
+        in: path
+        name: lon
+        required: true
+        type: number
+      - default: "10"
+        description: KM
+        in: query
+        name: distance
+        type: string
+      responses:
+        "200":
+          description: 'data: []model.ResParkingSpace'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResParkingSpace'
+            type: array
+      security:
+      - Token: []
+      summary: Show Parking Space Nearby on Maps  (permission = consumer)
+      tags:
+      - End User
+  /consumer/home/map/schedules/{id}/parking-space:
+    get:
+      operationId: MapParkingSpaceDetail
+      parameters:
+      - description: Parking Space
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: []model.ResParkingSpaceDetail'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResParkingSpaceDetail'
+            type: array
+      security:
+      - Token: []
+      summary: Show Schedule Parking Space Nearby on Maps  (permission = consumer)
+      tags:
+      - End User
+  /consumer/home/nearby/{lat}/{lon}:
+    get:
+      operationId: Nearby
+      parameters:
+      - description: Latitude
+        in: path
+        name: lat
+        required: true
+        type: number
+      - description: Longitude
+        in: path
+        name: lon
+        required: true
+        type: number
+      - default: "999999"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - default: "10"
+        description: KM
+        in: query
+        name: distance
+        type: string
+      responses:
+        "200":
+          description: 'data: model.Pagination'
+          schema:
+            $ref: '#/definitions/model.Pagination'
+      security:
+      - Token: []
+      summary: Landing Page End User Nearby (permission = consumer)
+      tags:
+      - End User
+  /consumer/home/schedules-regular/{typesId}:
+    get:
+      operationId: MerchantSchedule
+      parameters:
+      - description: Tasks Regular ID
+        in: path
+        name: typesId
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: []model.Schedules'
+          schema:
+            items:
+              $ref: '#/definitions/model.Schedules'
+            type: array
+      security:
+      - Token: []
+      summary: Show Schedules Regular Merchants  (permission = consumer)
+      tags:
+      - End User
+  /consumer/home/visit-sales:
+    get:
+      operationId: VisitSales
+      parameters:
+      - default: "999999"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      responses:
+        "200":
+          description: 'data: []model.ResVisitSales'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResVisitSales'
+            type: array
+      security:
+      - Token: []
+      summary: Show HomeVisit Sales  (permission = consumer)
+      tags:
+      - End User
+  /consumer/home/visit-sales/detail/{merchantId}:
+    get:
+      operationId: VisitSalesDetail
+      parameters:
+      - description: merchant id
+        in: path
+        name: merchantId
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: []model.ResVisitSalesDetail'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResVisitSalesDetail'
+            type: array
+      security:
+      - Token: []
+      summary: Show HomeVisit Sales Available  (permission = consumer)
+      tags:
+      - End User
+  /consumer/merchant/menu/{merchantId}:
+    get:
+      operationId: GetMerchantMenu
+      parameters:
+      - default: all
+        description: all, nearby, visit
+        in: query
+        name: filter
+        type: string
+      - description: Merchant ID
+        in: path
+        name: merchantId
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: []entity.MerchantMenu'
+          schema:
+            items:
+              $ref: '#/definitions/entity.MerchantMenu'
+            type: array
+      security:
+      - Token: []
+      summary: Get Merchant Menu (permission = consumer)
+      tags:
+      - End User
+  /consumer/merchant/tax/{merchantId}:
+    get:
+      operationId: GetMerchantTax
+      parameters:
+      - description: Merchant ID
+        in: path
+        name: merchantId
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: entity.MerchantTax'
+          schema:
+            $ref: '#/definitions/entity.MerchantTax'
+      security:
+      - Token: []
+      summary: Get Merchant Tax (permission = consumer)
+      tags:
+      - End User
+  /consumer/order/history:
+    get:
+      operationId: OrderHistory
+      parameters:
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - default: all
+        description: ' '
+        in: query
+        name: filter
+        type: string
+      responses:
+        "200":
+          description: 'data: model.Pagination'
+          schema:
+            $ref: '#/definitions/model.Pagination'
+      security:
+      - Token: []
+      summary: Order History (permission = consumer)
+      tags:
+      - End User
+  /consumer/payment-method:
+    get:
+      operationId: GetPaymentMethod
+      responses:
+        "200":
+          description: 'data: []model.ResPaymentMethod'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResPaymentMethod'
+            type: array
+      security:
+      - Token: []
+      summary: Get Payment Method (permission = consumer)
+      tags:
+      - End User
+  /consumer/registration-token/{token}:
+    post:
+      operationId: RegistrationTokenEndUser
+      parameters:
+      - description: fcm token from client SDK
+        in: path
+        name: token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: model.ResTrxOrderList'
+          schema:
+            $ref: '#/definitions/model.ResTrxOrderList'
+      security:
+      - Token: []
+      summary: Send Registration Token FCM, Its should be done to archive push notification
+        (permission = merchant)
+      tags:
+      - End User
+  /consumer/update/userprofile:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: UpdateEndUser
+      parameters:
+      - description: End User Name
+        in: formData
+        name: name
+        required: true
+        type: string
+      - description: End User Address
+        in: formData
+        name: address
+        required: true
+        type: string
+      - description: End User Phone
+        in: formData
+        name: phone
+        required: true
+        type: string
+      - description: End User Email
+        in: formData
+        name: email
+        required: true
+        type: string
+      - description: Profile Picture
+        in: formData
+        name: image
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'message: "User Successfully Updated" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: 'code: 422, message: "Error When Update User Profile" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update End User Profile (permission = consumer)
+      tags:
+      - End User
+  /forgotpassword:
+    post:
+      operationId: ForgotPassword
+      parameters:
+      - description: username
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqResetPassword'
+      responses:
+        "200":
+          description: 'message: "Send Email Forgot Password Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Username not found" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      summary: Send Email Forgot Password
+      tags:
+      - Authorization
+  /homevisit:
+    get:
+      operationId: GetAllHV
+      parameters:
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: 'e.g.: id,desc / id,asc'
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: model.Pagination
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Get All Home Visit Pagination (permission = admin)
+      tags:
+      - Home Visit
+    post:
+      operationId: CreateHV
+      parameters:
+      - description: all fields mandatory
+        in: body
+        name: homeVisit
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqCreateHomevisitSales'
+      responses:
+        "200":
+          description: 'data: []entity.HomevisitSales'
+          schema:
+            items:
+              $ref: '#/definitions/entity.HomevisitSales'
+            type: array
+      security:
+      - Token: []
+      summary: Create New Home Visit (permission = admin)
+      tags:
+      - Home Visit
+    put:
+      operationId: UpdateHomeVisit
+      parameters:
+      - description: all fields mandatory
+        in: body
+        name: homeVisit
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqUpdateHomevisitSales'
+      responses:
+        "200":
+          description: 'data: []entity.HomevisitSales'
+          schema:
+            items:
+              $ref: '#/definitions/entity.HomevisitSales'
+            type: array
+      security:
+      - Token: []
+      summary: Update Home Visit (permission = admin)
+      tags:
+      - Home Visit
+  /homevisit/batch:
+    post:
+      operationId: BatchCreateHV
+      parameters:
+      - description: all fields mandatory
+        in: body
+        name: batchHomeVisit
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqBatchCreateHomevisitSales'
+      responses:
+        "200":
+          description: 'data: []entity.HomevisitSales'
+          schema:
+            items:
+              $ref: '#/definitions/entity.HomevisitSales'
+            type: array
+      security:
+      - Token: []
+      summary: Batch Create New Home Visit (permission = admin)
+      tags:
+      - Home Visit
+  /homevisit/deletebydate/{date}:
+    delete:
+      operationId: DeleteHomeVisit
+      parameters:
+      - description: yyyy-mm-dd
+        in: path
+        name: date
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'message: "successfully deleted home visit!" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: 'message: "Failed to Delete Menu'
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Home Visit (permission = admin)
+      tags:
+      - Home Visit
+  /homevisit/deletebyid/{id}:
+    delete:
+      operationId: DeleteHomeVisitByID
+      parameters:
+      - description: number
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'message: "successfully deleted home visit!" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: 'message: "Failed to Delete Menu'
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Home Visit By ID (permission = admin)
+      tags:
+      - Home Visit
+  /homevisit/info/{date}:
+    get:
+      operationId: GetInfoHV
+      parameters:
+      - description: yyyy-mm-dd
+        in: path
+        name: date
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: model.ResHomeVisitGetInfo'
+          schema:
+            $ref: '#/definitions/model.ResHomeVisitGetInfo'
+      security:
+      - Token: []
+      summary: Get Info Home Visit (permission = admin)
+      tags:
+      - Home Visit
+  /log:
+    get:
+      operationId: GetAllLog
+      parameters:
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: 'e.g.: id,desc / id,asc'
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: model.Pagination
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Get All Log Activity Pagination (permission = superadmin)
+      tags:
+      - Log Activity
+  /log-merchant:
+    get:
+      operationId: GetAllLogMerchant
+      parameters:
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: 'e.g.: id,desc / id,asc'
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: model.Pagination
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Get All Log Merchant Pagination (permission = admin)
+      tags:
+      - Log Merchant
+  /login:
+    post:
+      operationId: Login
+      parameters:
+      - default: streetbox-mobile-merchant
+        description: ' '
+        in: header
+        name: CLIENT_ID
+        required: true
+        type: string
+      - description: all fields mandatory
+        in: body
+        name: login
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqUserLogin'
+      responses:
+        "200":
+          description: 'token: "exampletokenresponse" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "401":
+          description: 'code: 401, message: "username or password not valid, please
+            try again" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      summary: Login user
+      tags:
+      - Authorization
+  /login/google:
+    post:
+      operationId: LoginGoogle
+      parameters:
+      - description: Google
+        in: body
+        name: login
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqUserLoginGoogle'
+      responses:
+        "200":
+          description: 'message: "exampletokenresponse" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "401":
+          description: 'code: 401, message: "username or password not valid, please
+            try again" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      summary: Login End User Using Google
+      tags:
+      - Authorization
+  /merchant:
+    post:
+      operationId: CreateMerchant
+      parameters:
+      - description: all fields mandatory
+        in: body
+        name: merchant
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqCreateMerchant'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.Merchant'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create Merchant (permission = admin)
+      tags:
+      - Merchant
+    put:
+      operationId: UpdateMerchant
+      parameters:
+      - description: Update Merchant
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqUpdateMerchant'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.Merchant'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Merchant (permission = merchant)
+      tags:
+      - Merchant
+  /merchant/:id/category:
+    delete:
+      operationId: DeleteMerchantCategory
+      parameters:
+      - description: category's id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: Delete category failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Merchant Category (permission = superadmin)
+      tags:
+      - Merchant Category
+  /merchant/{id}:
+    delete:
+      operationId: DeleteByIDMerchant
+      parameters:
+      - description: MerchantID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: '{ "message": "Success" }'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Merchant by ID (permission = superadmin)
+      tags:
+      - Merchant
+  /merchant/{id}/foodtruck:
+    delete:
+      operationId: DeleteFoodtruckByID
+      parameters:
+      - description: FoodtruckID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: '{ "message": "Success" }'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Foodtruck by ID (permission = admin)
+      tags:
+      - Merchant
+  /merchant/{id}/menu/delete:
+    delete:
+      operationId: DeleteMenu
+      parameters:
+      - description: Merchant Menu ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'message: "Menu Successfully Deleted" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: 'message: "Failed to Delete Menu'
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Merchant Menu (permission = merchant)
+      tags:
+      - Merchant
+  /merchant/all:
+    get:
+      operationId: GetAllMerchant
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            items:
+              $ref: '#/definitions/entity.Merchant'
+            type: array
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get All Merchant (permission = superadmin)
+      tags:
+      - Merchant
+  /merchant/category:
+    get:
+      operationId: GetAllMerchantCategory
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            items:
+              $ref: '#/definitions/entity.MerchantCategory'
+            type: array
+        "500":
+          description: Inquiry categories failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get All Merchant Category (permission = superadmin)
+      tags:
+      - Merchant Category
+    post:
+      operationId: CreateMerchantCategory
+      parameters:
+      - description: category field mandatory
+        in: body
+        name: merchantcategory
+        required: true
+        schema:
+          $ref: '#/definitions/entity.MerchantCategory'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.MerchantCategory'
+        "422":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Create category failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create Merchant Category (permission = superadmin)
+      tags:
+      - Merchant Category
+    put:
+      operationId: UpdateMerchantCategory
+      parameters:
+      - description: all fields mandatory
+        in: body
+        name: merchantcategory
+        required: true
+        schema:
+          $ref: '#/definitions/entity.MerchantCategory'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.MerchantCategory'
+        "422":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Update category failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Merchant Category (permission = superadmin)
+      tags:
+      - Merchant Category
+  /merchant/count/foodtruck:
+    get:
+      operationId: CountFoodtruck
+      responses:
+        "200":
+          description: 'data: model.ResCountFoodtruck'
+          schema:
+            $ref: '#/definitions/model.ResCountFoodtruck'
+      security:
+      - Token: []
+      summary: Count Foodtruck (permission = admin)
+      tags:
+      - Merchant
+  /merchant/csv/uploadmenu:
+    post:
+      consumes:
+      - multipart/form-data
+      operationId: ImportCSV
+      parameters:
+      - description: csv file
+        in: formData
+        name: csv
+        required: true
+        type: file
+      - description: image zip
+        in: formData
+        name: imageZip
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            items:
+              $ref: '#/definitions/entity.MerchantMenu'
+            type: array
+        "400":
+          description: 'code: 400, message: "Form/Upoad image error" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Update Image Meta data failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Upload CSV (permission = admin)
+      tags:
+      - Merchant
+  /merchant/delete-image-menu/{id}:
+    put:
+      operationId: DeleteImageMenu
+      parameters:
+      - description: Merchant Menu ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: 'message: "Delete Image Merchant Menu Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "400":
+          description: 'code: 400, message: "Delete Image Menu error" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Delete Image Meta data failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Image Menu(permission = admin)
+      tags:
+      - Merchant
+  /merchant/foodtruck:
+    post:
+      operationId: CreateFoodtruck
+      parameters:
+      - description: username mandatory
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqCreateFoodtruck'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.Users'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create Foodtruck (permission = admin)
+      tags:
+      - Merchant
+  /merchant/foodtruck/{id}/resetpassword:
+    put:
+      operationId: ResetPasswordFoodTruck
+      parameters:
+      - description: foodtruckID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Reset Password Foodtruck
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqChangePassword'
+      responses:
+        "201":
+          description: 'message: "Reset Food Truck Password Success!" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "400":
+          description: 'code: 400, message: "Client Errors" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Server Errors" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Reset Password Footruck by Admin (permission = admin)
+      tags:
+      - Merchant
+  /merchant/foodtruck/{id}/update:
+    put:
+      operationId: UpdateFoodtruck
+      parameters:
+      - description: foodtruckID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update Foodtruck
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqUserUpdate'
+      responses:
+        "200":
+          description: 'data: entity.Users'
+          schema:
+            $ref: '#/definitions/entity.Users'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Foodtruck Info by Admin (permission = admin)
+      tags:
+      - Merchant
+  /merchant/foodtruck/all:
+    get:
+      operationId: GetAllFoodtruck
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResGetFoodtruckTasks'
+            type: array
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get All Foodtruck (permission = admin)
+      tags:
+      - Merchant
+  /merchant/info:
+    get:
+      operationId: GetInfoMerchant
+      responses:
+        "200":
+          description: 'data: model.Merchant'
+          schema:
+            $ref: '#/definitions/model.Merchant'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get Info Merchant (permission = merchant)
+      tags:
+      - Merchant
+  /merchant/info/{id}:
+    get:
+      operationId: GetByIDMerchant
+      parameters:
+      - description: merchantID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.Merchant'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get Merchant by ID (permission = superadmin)
+      tags:
+      - Merchant
+  /merchant/info/{id}/foodtruck:
+    get:
+      operationId: GetFoodtruckByID
+      parameters:
+      - description: foodtruckID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: entity.Users'
+          schema:
+            $ref: '#/definitions/entity.Users'
+      security:
+      - Token: []
+      summary: Get Foodtruck by ID (permission = admin)
+      tags:
+      - Merchant
+  /merchant/list/menu:
+    get:
+      operationId: ListMenu
+      parameters:
+      - default: all
+        description: all, nearby, visit
+        in: query
+        name: filter
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/entity.MerchantMenu'
+            type: array
+      security:
+      - Token: []
+      summary: Merchant List Menu (permission = merchant)
+      tags:
+      - Merchant
+  /merchant/menu:
+    post:
+      operationId: CreateMenu
+      parameters:
+      - description: ' '
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqCreateMerchantMenu'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.MerchantMenu'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create Menu (permission = admin)
+      tags:
+      - Merchant
+  /merchant/menu/{id}:
+    put:
+      operationId: UpdateMenu
+      parameters:
+      - description: Merchant Menu ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: ' '
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqUpdateMerchantMenu'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.MerchantMenu'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Merchant Menu (permission = merchant)
+      tags:
+      - Merchant
+  /merchant/menu/all:
+    get:
+      operationId: ListPaginateMenu
+      parameters:
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: 'e.g.: id,desc/ id,asc'
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: model.Pagination
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: List Paginate Menu (permission = admin)
+      tags:
+      - Merchant
+  /merchant/menu/info/{id}:
+    get:
+      operationId: GetMenuByID
+      parameters:
+      - description: Merchant Menu ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/entity.MerchantMenu'
+      security:
+      - Token: []
+      summary: Get Menu By ID (permission = merchant)
+      tags:
+      - Merchant
+  /merchant/pos/gettransaction:
+    get:
+      operationId: GetOrderTransaction
+      parameters:
+      - description: date DD/MM/YYYY
+        in: query
+        name: startDate
+        type: string
+      - description: date DD/MM/YYYY
+        in: query
+        name: endDate
+        type: string
+      - description: keyword like trx number and order number
+        in: query
+        name: keyword
+        type: string
+      responses:
+        "200":
+          description: 'data: model.ResTrxOrderList'
+          schema:
+            $ref: '#/definitions/model.ResTrxOrderList'
+      security:
+      - Token: []
+      summary: Get Order POS Transaction
+      tags:
+      - Merchant
+  /merchant/registration-token/{token}:
+    post:
+      operationId: RegistrationToken
+      parameters:
+      - description: fcm token from client SDK
+        in: path
+        name: token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: Registration Token Successfully'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Send Registration Token FCM, Its should be done to archive push notification
+        (permission = merchant)
+      tags:
+      - Merchant
+  /merchant/remove-banner/{filename}:
+    put:
+      operationId: RemoveBanner
+      parameters:
+      - description: banner filename
+        in: path
+        name: filename
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: Banner Removed Successfully'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Remove Banner (permission = admin)
+      tags:
+      - Merchant
+  /merchant/remove-logo/{filename}:
+    put:
+      operationId: RemoveLogo
+      parameters:
+      - description: logo filename
+        in: path
+        name: filename
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: Logo Removed Successfully'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Remove Logo (permission = admin)
+      tags:
+      - Merchant
+  /merchant/tax/menu:
+    post:
+      operationId: MerchantTax
+      parameters:
+      - description: ' '
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.MerchantTax'
+      responses:
+        "200":
+          description: 'data: entity.MerchantTax'
+          schema:
+            $ref: '#/definitions/entity.MerchantTax'
+      security:
+      - Token: []
+      summary: Set Merchant Tax (permission = admin)
+      tags:
+      - Merchant
+  /merchant/taxsetting/menu:
+    get:
+      operationId: GetTaxSetting
+      responses:
+        "200":
+          description: 'data: entity.MerchantTax'
+          schema:
+            $ref: '#/definitions/entity.MerchantTax'
+      security:
+      - Token: []
+      summary: Get Merchant Tax Setting (permission = merchant)
+      tags:
+      - Merchant
+  /merchant/upload-banner:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: UploadBanner
+      parameters:
+      - description: image banner
+        in: formData
+        name: banner
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: 'message: "Upload Banner Merchant Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "400":
+          description: 'code: 400, message: "Form/Upoad image error" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Update Image Meta data failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Upload Banner (permission = admin)
+      tags:
+      - Merchant
+  /merchant/upload-logo:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: UploadLogo
+      parameters:
+      - description: image logo
+        in: formData
+        name: logo
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: 'message: "Upload Logo Merchant Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "400":
+          description: 'code: 400, message: "Form/Upoad image error" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Update Image Meta data failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Upload Logo (permission = admin)
+      tags:
+      - Merchant
+  /merchant/upload-menu/{id}:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: UploadMenu
+      parameters:
+      - description: Merchant Menu ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: image menu
+        in: formData
+        name: image
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: 'message: "Upload Menu Merchant Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "400":
+          description: 'code: 400, message: "Form/Upload Image Menu error" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Update Image Meta data failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Upload Image Menu (permission = admin)
+      tags:
+      - Merchant
+  /merchant/xendit-generate-subaccount:
+    post:
+      operationId: XenditGenerateSubAccount
+      parameters:
+      - description: all fields mandatory
+        in: body
+        name: merchant
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqXenditGenerateSubAccount'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.Merchant'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Xendit Generate Sub-Account Merchant (permission = admin)
+      tags:
+      - Merchant
+  /parkingspace:
+    get:
+      operationId: GetAllPSpace
+      parameters:
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: 'e.g.: id,desc / id,asc'
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: model.Pagination
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Get All Parking Space Pagination (permission = admin)
+      tags:
+      - Parking Space
+    post:
+      consumes:
+      - multipart/form-data
+      operationId: CreateParkingSpace
+      parameters:
+      - description: Parking Space Name
+        in: formData
+        name: name
+        required: true
+        type: string
+      - description: Address
+        in: formData
+        name: address
+        required: true
+        type: string
+      - description: Parking Space Name
+        in: formData
+        name: name
+        required: true
+        type: string
+      - description: Latitude
+        in: formData
+        name: lat
+        required: true
+        type: number
+      - description: Longitude
+        in: formData
+        name: long
+        required: true
+        type: number
+      - description: Total Space
+        in: formData
+        name: totalSpace
+        required: true
+        type: string
+      - description: Description
+        in: formData
+        name: desc
+        required: true
+        type: string
+      - description: Landlord info
+        in: formData
+        name: landlordInfo
+        required: true
+        type: string
+      - description: Rating
+        in: formData
+        name: rating
+        required: true
+        type: number
+      - description: Start Contract yyyy-MM-dd
+        in: formData
+        name: startContract
+        required: true
+        type: string
+      - description: End Contract yyyy-MM-dd
+        in: formData
+        name: endContract
+        required: true
+        type: string
+      - description: Start Operation yyyy-MM-dd HH:mm:SS
+        in: formData
+        name: startTime
+        required: true
+        type: string
+      - description: End Operation yyyy-MM-dd HH:mm:SS
+        in: formData
+        name: endTime
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: 'data: entity.ParkingSpace, message: "Create Parking Space
+            Success" '
+          schema:
+            $ref: '#/definitions/entity.ParkingSpace'
+        "500":
+          description: 'code: 500, message: "Create Parking Space Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create Parking Space (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/{id}/delete:
+    delete:
+      operationId: DeleteByIDPSpace
+      parameters:
+      - description: parking space
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'message: "Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: 'code: 500, message: "Delete Parking Space Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Parking Space by ID (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/{id}/doc/delete:
+    put:
+      operationId: DeleteDoc
+      parameters:
+      - description: parking space
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Delete Document
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqDeleteAsset'
+      responses:
+        "200":
+          description: 'message: "Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Failed to Delete Doc" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Document Parking Space by Document Name (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/{id}/doc/upload:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: UploadDoc
+      parameters:
+      - description: parking_space_id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: document parking space
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: '{ "message": "Upload Document Parking Space Success" }'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "400":
+          description: 'code: 400, message: "Form/Upoad file error" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Update Document Meta data failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Upload Documents (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/{id}/image/delete:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: DeleteImage
+      parameters:
+      - description: parking space
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Delete Image
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqDeleteAsset'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'message: "Success'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Delete Image Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Image by Image Name (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/{id}/image/upload:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: UploadImage
+      parameters:
+      - description: parking_space_id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: image parking space
+        in: formData
+        name: image
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: 'message: "Upload Image Parking Space Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "400":
+          description: 'code: 400, message: "Form/Upoad image error" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Update Image Meta data failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Upload Image (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/{id}/sales/delete:
+    delete:
+      operationId: DeleteSalesByID
+      parameters:
+      - description: parking space
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'message: "Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: 'code: 500, message: "Failed to Delete ParkingSpaceSales" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get Parking Space by ID (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/{id}/sales/update:
+    put:
+      operationId: UpdUpdateSalesate
+      parameters:
+      - description: Parking Space Sales
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update Sales
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqSalesUpdate'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.ParkingSpaceSales'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Update Sales Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Parking Space Sales (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/{id}/update:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: Update
+      parameters:
+      - description: parking_space_id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: ' '
+        in: formData
+        name: name
+        type: string
+      - description: ' '
+        in: formData
+        name: address
+        type: string
+      - description: ' '
+        in: formData
+        name: latitude
+        type: number
+      - description: ' '
+        in: formData
+        name: longitude
+        type: number
+      - description: space
+        in: formData
+        name: total
+        type: integer
+      - description: ' '
+        in: formData
+        name: description
+        type: string
+      - description: ' '
+        in: formData
+        name: latitude
+        type: string
+      - description: ' '
+        in: formData
+        name: rating
+        type: number
+      - description: ' '
+        in: formData
+        name: startContract
+        type: string
+      - description: ' '
+        in: formData
+        name: endContract
+        type: string
+      - description: ' '
+        in: formData
+        name: startTime
+        type: string
+      - description: ' '
+        in: formData
+        name: endTime
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'data: entity.ParkingSpace'
+          schema:
+            $ref: '#/definitions/entity.ParkingSpace'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Update Parking Space Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update Parking Space except uploading files/images (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/list:
+    get:
+      operationId: GetAllList
+      responses:
+        "200":
+          description: model.Pagination
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Get All Parking Space (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/list/sales:
+    get:
+      responses:
+        "200":
+          description: entity.ParkingSpaceSales
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Get All Parking Space Sales List no pagination (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/sales:
+    get:
+      operationId: GetSales
+      parameters:
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: 'e.g.: id,desc / id,asc'
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: model.Pagination
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Get All Parking Space Sales Pagination (permission = admin)
+      tags:
+      - Parking Space
+  /parkingspace/sales/{id}:
+    get:
+      operationId: GetSalesByPSpaceID
+      parameters:
+      - description: ParkingSpaceID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: 'e.g.: id,desc / id,asc'
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: model.Pagination
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Get Parking Space Sales Pagination by ParkingSpaceID (permission =
+        admin)
+      tags:
+      - Parking Space
+  /parkingspace/sales/{id}/info:
+    get:
+      operationId: GetSalesByID
+      parameters:
+      - description: Parking Space
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: entity.ParkingSpaceSales'
+          schema:
+            $ref: '#/definitions/entity.ParkingSpaceSales'
+      security:
+      - Token: []
+      summary: Get Parking Space Sales by ID (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/sales/create:
+    post:
+      consumes:
+      - multipart/form-data
+      operationId: CreateSales
+      parameters:
+      - description: Parking Space ID
+        in: formData
+        name: parkingSpaceId
+        required: true
+        type: integer
+      - description: Start Date yyyy-MM-dd
+        in: formData
+        name: startDate
+        required: true
+        type: string
+      - description: End Date yyyy-MM-dd
+        in: formData
+        name: endDate
+        required: true
+        type: string
+      - description: Total Slot
+        in: formData
+        name: totalSlot
+        required: true
+        type: integer
+      - description: Point
+        in: formData
+        name: point
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'data: entity.ParkingSpaceSales, message: "Create Sales Succeed" '
+          schema:
+            $ref: '#/definitions/entity.ParkingSpaceSales'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Create Sales Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create Parking Space Sales (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/search/sales/{key}:
+    get:
+      operationId: SearchSalesByName
+      parameters:
+      - description: keyword
+        in: path
+        name: key
+        required: true
+        type: string
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: 'e.g.: id,desc / id,asc'
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: ' '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Search Parking Space Sales by Name or Address (permission = admin)
+      tags:
+      - Parking Space
+  /parkingspace/show/{id}:
+    get:
+      operationId: GetByIDPspace
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: entity.ParkingSpace'
+          schema:
+            $ref: '#/definitions/entity.ParkingSpace'
+      security:
+      - Token: []
+      summary: Get Parking Space by ID (permission = superadmin)
+      tags:
+      - Parking Space
+  /parkingspace/spacesalesdate/{id}:
+    get:
+      operationId: GetSpaceBySalesDate
+      parameters:
+      - description: Parking Space
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: yyyy-mm-dd hh:mm:ss
+        in: query
+        name: startDate
+        required: true
+        type: string
+      - description: yyyy-mm-dd hh:mm:ss
+        in: query
+        name: endDate
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: entity.ParkingSpace'
+          schema:
+            $ref: '#/definitions/entity.ParkingSpace'
+      security:
+      - Token: []
+      summary: Get Parking Space by Sales Date (permission = superadmin)
+      tags:
+      - Parking Space
+  /payment/create-qrcode:
+    post:
+      consumes:
+      - application/x-www-form-urlencoded
+      operationId: CreateQRIS
+      parameters:
+      - description: merchant ID
+        in: formData
+        name: merchant_id
+        required: true
+        type: integer
+      - description: total amount transaction
+        in: formData
+        name: amount
+        required: true
+        type: integer
+      - description: types transaction
+        enum:
+        - ORDER
+        - VISIT
+        in: formData
+        name: types
+        required: true
+        type: string
+      - description: Address Transaction
+        in: formData
+        name: address
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'data: model.ResCreateQRIS'
+          schema:
+            $ref: '#/definitions/model.ResCreateQRIS'
+      security:
+      - Token: []
+      summary: Create QRIS Xendit Payment Method
+      tags:
+      - Payment
+  /payment/qrcode/{trxId}:
+    get:
+      operationId: GetQRByTrxID
+      parameters:
+      - description: Transaction ID
+        in: path
+        name: trxId
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: model.ResCreateQRIS'
+          schema:
+            $ref: '#/definitions/model.ResCreateQRIS'
+      security:
+      - Token: []
+      summary: Get QRIS Xendit Payment Method by Transaction ID
+      tags:
+      - Payment
+  /payment/simulate-qrcode/{trxId}:
+    post:
+      consumes:
+      - application/x-www-form-urlencoded
+      operationId: SimulateQR
+      parameters:
+      - description: Transaction ID
+        in: path
+        name: trxId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'data: model.ResSimulateQR'
+          schema:
+            $ref: '#/definitions/model.ResSimulateQR'
+      security:
+      - Token: []
+      summary: Simulate QRIS Xendit Payment Method (testmode only)
+      tags:
+      - Payment
+  /payment/xendit/qris/callback:
+    post:
+      consumes:
+      - application/x-www-form-urlencoded
+      operationId: XenditCallback
+      parameters:
+      - description: Token Callback for Verify
+        in: header
+        name: x-callback-token
+        required: true
+        type: string
+      - description: Callback from Xendit
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqXndQRISCallback'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'data: model.ResponseSuccess'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      summary: Callback executed by Xendit for Status Payment QRIS (Production Only)
+      tags:
+      - Payment
+  /resetpassword:
+    put:
+      operationId: ResetPassword
+      parameters:
+      - description: change password user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqChangePassword'
+      responses:
+        "200":
+          description: 'message: "Reset Password Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Reset Password Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      summary: Reset password user (permission  = all)
+      tags:
+      - Authorization
+  /role:
+    get:
+      operationId: GetAllRole
+      responses:
+        "200":
+          description: 'data: []entity.Role '
+          schema:
+            items:
+              $ref: '#/definitions/entity.Role'
+            type: array
+      security:
+      - Token: []
+      summary: Get All Role (permission = superadmin)
+      tags:
+      - Master Role
+    post:
+      operationId: CreateRole
+      parameters:
+      - description: role
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqRoleCreate'
+      responses:
+        "200":
+          description: 'data: entity.Role, message: "New Role has created" '
+          schema:
+            $ref: '#/definitions/entity.Role'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Create Role Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create new Role (permission = superadmin)
+      tags:
+      - Master Role
+  /role/exclude:
+    get:
+      operationId: GetAllExclude
+      responses:
+        "200":
+          description: 'data: []entity.Role '
+          schema:
+            items:
+              $ref: '#/definitions/entity.Role'
+            type: array
+      security:
+      - Token: []
+      summary: Get All Role Exclude Foodtruck (permission = superadmin)
+      tags:
+      - Master Role
+  /tasks/all:
+    get:
+      operationId: GetAllTasks
+      responses:
+        "200":
+          description: 'data: []model.ResMyTasksReg'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResMyTasksReg'
+            type: array
+      security:
+      - Token: []
+      summary: Get All Tasks Uncompleted (permission = admin)
+      tags:
+      - Tasks
+  /tasks/homevisit:
+    post:
+      operationId: CreateTasksHomevisit
+      parameters:
+      - description: all fields mandatory
+        in: body
+        name: task
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqCreateTasksHomevisit'
+      responses:
+        "200":
+          description: 'data: entity.Tasks'
+          schema:
+            $ref: '#/definitions/entity.Tasks'
+      security:
+      - Token: []
+      summary: Create New Task Home Visit FoodTruck (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/homevisit/check-in:
+    post:
+      operationId: CreateHomeVisitCheckIn
+      parameters:
+      - description: All Mandatory
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqTasksVisitLog'
+      responses:
+        "200":
+          description: 'data : entity.TasksRegularLog'
+          schema:
+            $ref: '#/definitions/entity.TasksRegularLog'
+      security:
+      - Token: []
+      summary: Create Tasks HomeVisit Log CheckIn (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/homevisit/check-out:
+    post:
+      operationId: CreateHomeVisitCheckOut
+      parameters:
+      - description: All Mandatory
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqTasksVisitLog'
+      responses:
+        "200":
+          description: 'data : entity.TasksRegularLog'
+          schema:
+            $ref: '#/definitions/entity.TasksRegularLog'
+      security:
+      - Token: []
+      summary: Create Tasks HomeVisit Log CheckOut (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/nonregular:
+    post:
+      operationId: CreateTasksNonRegular
+      responses:
+        "200":
+          description: 'data: entity.Tasks'
+          schema:
+            $ref: '#/definitions/entity.Tasks'
+      security:
+      - Token: []
+      summary: Create New Task NonRegular FoodTruck (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/nonregular/check-in:
+    post:
+      operationId: CreateNonRegCheckIn
+      parameters:
+      - description: All Mandatory
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqTasksNonRegLog'
+      responses:
+        "200":
+          description: 'data : entity.Tasks'
+          schema:
+            $ref: '#/definitions/entity.Tasks'
+      security:
+      - Token: []
+      summary: Create Tasks Non Regular Log CheckIn (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/nonregular/check-out:
+    post:
+      operationId: CreateNonRegCheckOut
+      parameters:
+      - description: All Mandatory
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqTasksNonRegLog'
+      responses:
+        "200":
+          description: 'data : entity.TasksNonregularLog'
+          schema:
+            $ref: '#/definitions/entity.TasksNonregularLog'
+      security:
+      - Token: []
+      summary: Create Tasks Non Regular Log CheckOut (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/nonregular/list:
+    get:
+      operationId: MyTaskNonRegular
+      responses:
+        "200":
+          description: 'data: model.ResMyTasksNonReg'
+          schema:
+            $ref: '#/definitions/model.ResMyTasksNonReg'
+      security:
+      - Token: []
+      summary: Get Free Tasks List (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/nonregular/status:
+    get:
+      operationId: NonRegStatus
+      responses:
+        "200":
+          description: 'data: entity.Tasks'
+          schema:
+            $ref: '#/definitions/entity.Tasks'
+      security:
+      - Token: []
+      summary: Get Free Tasks Status (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/ongoing/{id}:
+    put:
+      operationId: ChangeToOngoing
+      parameters:
+      - description: TasksID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: "Success Update Tasks Status" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Change Status Tasks to Ongoing (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/regular:
+    post:
+      consumes:
+      - multipart/form-data
+      operationId: CreateTasksRegular
+      parameters:
+      - description: ' '
+        in: formData
+        name: trxSalesId
+        required: true
+        type: integer
+      - description: ' '
+        in: formData
+        name: usersId
+        required: true
+        type: integer
+      - description: ' '
+        in: formData
+        name: scheduleDate
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'data: entity.Tasks'
+          schema:
+            $ref: '#/definitions/entity.Tasks'
+      security:
+      - Token: []
+      summary: Create New Task Regular FoodTruck (permission = admin)
+      tags:
+      - Tasks
+  /tasks/regular/check-in:
+    post:
+      operationId: CreateRegularCheckIn
+      parameters:
+      - description: All Mandatory
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqTasksRegLog'
+      responses:
+        "200":
+          description: 'data : entity.TasksRegularLog'
+          schema:
+            $ref: '#/definitions/entity.TasksRegularLog'
+      security:
+      - Token: []
+      summary: Create Tasks Regular Log CheckIn (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/regular/check-out:
+    post:
+      operationId: CreateRegularCheckOut
+      parameters:
+      - description: All Mandatory
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqTasksRegLog'
+      responses:
+        "200":
+          description: 'data : entity.TasksRegularLog'
+          schema:
+            $ref: '#/definitions/entity.TasksRegularLog'
+      security:
+      - Token: []
+      summary: Create Tasks Regular Log CheckOut (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/regular/list:
+    get:
+      operationId: MyTaskRegular
+      responses:
+        "200":
+          description: 'data: model.ResMyTasksReg'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResMyTasksReg'
+            type: array
+      security:
+      - Token: []
+      summary: Get Tasks Regular/Homevisit List Foodtruck (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/shift-in:
+    post:
+      operationId: ShiftIn
+      responses:
+        "200":
+          description: 'data: entity.MerchantUsersShift'
+          schema:
+            $ref: '#/definitions/entity.MerchantUsersShift'
+      security:
+      - Token: []
+      summary: Create Task Log Shift In (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/shift-in/status:
+    get:
+      operationId: ShiftInStatus
+      responses:
+        "200":
+          description: 'shiftIn : bool '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Check Status Shift-In (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/shift-out:
+    post:
+      operationId: ShiftOut
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.MerchantUsersShift'
+        "300":
+          description: Redirect
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "400":
+          description: Client Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Server Errors
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create Task Log Shift Out (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/tracking:
+    post:
+      operationId: CreateTracking
+      parameters:
+      - description: All Mandatory
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqCreateTasksTracking'
+      responses:
+        "200":
+          description: 'data : model.ResTasksTracking'
+          schema:
+            $ref: '#/definitions/model.ResTasksTracking'
+      security:
+      - Token: []
+      summary: Create Tasks Non Regular Log CheckOut (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/tracking/{id}/foodtruck:
+    get:
+      operationId: GetTracking
+      parameters:
+      - description: TasksID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data : model.ResTasksTracking'
+          schema:
+            $ref: '#/definitions/model.ResTasksTracking'
+      security:
+      - Token: []
+      summary: Create Tasks Non Regular Log CheckOut (permission = merchant)
+      tags:
+      - Tasks
+  /tasks/undo/{id}:
+    put:
+      operationId: ChangeToOpen
+      parameters:
+      - description: TasksID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: "Success Update Tasks Status" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Change Status Tasks from 2 to 1 (1=open,2=ongoing) (permission = merchant)
+      tags:
+      - Tasks
+  /trx/createsync:
+    post:
+      operationId: CreateSyncTrx
+      parameters:
+      - description: ' '
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqCreateSyncTrx'
+      responses:
+        "200":
+          description: 'data: entity.TrxSync'
+          schema:
+            $ref: '#/definitions/entity.TrxSync'
+      security:
+      - Token: []
+      summary: Create Sync Trx (permission = merchant)
+      tags:
+      - Transaction
+  /trx/homevisit:
+    post:
+      operationId: CreateTrxVisit
+      parameters:
+      - description: ' '
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqCreateVisitTrx'
+      responses:
+        "200":
+          description: 'data: entity.TrxVisit'
+          schema:
+            $ref: '#/definitions/entity.TrxVisit'
+      security:
+      - Token: []
+      summary: Create Homevisit Trx (permission = consumer)
+      tags:
+      - Transaction
+  /trx/info/{trxId}:
+    get:
+      operationId: GetInfotrx
+      parameters:
+      - description: transaction ID
+        in: path
+        name: trxId
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: model.ResTrx'
+          schema:
+            $ref: '#/definitions/model.ResTrx'
+      security:
+      - token: []
+      summary: Get Transaction Info (permission = consumer)
+      tags:
+      - Transaction
+  /trx/online-order:
+    get:
+      operationId: GetOnlineOrder
+      responses:
+        "200":
+          description: 'data: model.ResTrxOrderList'
+          schema:
+            $ref: '#/definitions/model.ResTrxOrderList'
+      security:
+      - Token: []
+      summary: Get Online Order Trx for POS (permission = merchant)
+      tags:
+      - Transaction
+  /trx/online-order/closed/{trxId}:
+    put:
+      operationId: ClosedOnlineOrder
+      parameters:
+      - description: Transaction ID
+        in: path
+        name: trxId
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: model.ResTrxOnlineClosed'
+          schema:
+            $ref: '#/definitions/model.ResTrxOnlineClosed'
+      security:
+      - Token: []
+      summary: Closed Online Order Trx for POS (permission = merchant)
+      tags:
+      - Transaction
+  /trx/order:
+    post:
+      operationId: OnlineOrder
+      parameters:
+      - description: ' '
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqTrxOrderOnline'
+      responses:
+        "200":
+          description: 'data: entity.Trx'
+          schema:
+            $ref: '#/definitions/entity.Trx'
+      summary: Create Online Order Trx (permission = consumer)
+      tags:
+      - Transaction
+  /trx/refund/space:
+    post:
+      operationId: CreateTrxSpaceRefund
+      parameters:
+      - description: ' '
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqRefundParkingSpaceSales'
+      responses:
+        "200":
+          description: 'message: Refund Space Transaction Success!'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Create Refund for Parking Space Sales(permission = superadmin)
+      tags:
+      - Transaction
+  /trx/refund/visit:
+    post:
+      operationId: CreateTrxRefundVisit
+      parameters:
+      - description: ' '
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqRefundHomeVisit'
+      responses:
+        "200":
+          description: 'message: Refund Space Transaction Success!'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Create Refund for Home Visit (permission = merchant)
+      tags:
+      - Transaction
+  /trx/report:
+    get:
+      operationId: TrxReportSingle
+      parameters:
+      - description: format 01 to 12
+        in: query
+        name: month
+        type: string
+      - description: 2015-now
+        in: query
+        name: year
+        type: string
+      responses:
+        "200":
+          description: 'data: model.ResHomeVisitBookingList'
+          schema:
+            $ref: '#/definitions/model.ResHomeVisitBookingList'
+      security:
+      - Token: []
+      summary: TransactionReport (permission = merchant)
+      tags:
+      - Transaction
+  /trx/report-all:
+    get:
+      operationId: TrxReportSingleAll
+      parameters:
+      - description: format 01 to 12
+        in: query
+        name: month
+        type: string
+      - description: 2015-now
+        in: query
+        name: year
+        type: string
+      - description: "10"
+        in: query
+        name: limit
+        type: string
+      - description: "1"
+        in: query
+        name: page
+        type: string
+      - description: id,desc
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: 'data: model.Pagination'
+          schema:
+            $ref: '#/definitions/model.Pagination'
+      security:
+      - Token: []
+      summary: TransactionReportAll (permission = merchant)
+      tags:
+      - Transaction
+  /trx/visit/booking/{id}:
+    get:
+      operationId: TrxVisitBookingByDate
+      parameters:
+      - description: "0"
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 'data: model.ResHomeVisitBookingDetailTimeNew'
+          schema:
+            $ref: '#/definitions/model.ResHomeVisitBookingDetailTimeNew'
+      security:
+      - Token: []
+      summary: List Home Visit Booking By Date (permission = merchant)
+      tags:
+      - Transaction
+  /trx/visit/bookingall:
+    get:
+      operationId: TrxVisitBookingList
+      parameters:
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: 'e.g.: id,desc / id,asc'
+        in: query
+        name: sort
+        type: string
+      - description: ' '
+        in: query
+        name: filter
+        type: string
+      responses:
+        "200":
+          description: 'data: model.Pagination'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: List Home Visit Booking List (permission = merchant)
+      tags:
+      - Transaction
+  /trxsales:
+    post:
+      operationId: CreateTrxSales
+      parameters:
+      - description: New Transaction Sales
+        in: body
+        name: trxSales
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqCreateTrxSales'
+      responses:
+        "200":
+          description: 'message: "Create Transaction Sales Succeed" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Create Transaction Sales Succeed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create Transaction Parking Space Sales (permission = superadmin)
+      tags:
+      - Transaction Sales
+  /trxsales/all:
+    get:
+      operationId: GetAllTrxSales
+      responses:
+        "200":
+          description: 'data: []model.ResTrxList'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResTrxList'
+            type: array
+      security:
+      - Token: []
+      summary: Get All Transaction (permission = superadmin)
+      tags:
+      - Transaction Sales
+  /trxsales/info/{id}:
+    get:
+      operationId: GetByIDTrxSales
+      parameters:
+      - description: Trx ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: []model.ResTrxList'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResTrxList'
+            type: array
+      security:
+      - Token: []
+      summary: Get Transaction by ID (permission = superadmin)
+      tags:
+      - Transaction Sales
+  /trxsales/list:
+    get:
+      operationId: GetList
+      parameters:
+      - default: "10"
+        description: ' '
+        in: query
+        name: limit
+        type: string
+      - default: "1"
+        description: ' '
+        in: query
+        name: page
+        type: string
+      - description: ' '
+        in: query
+        name: filter
+        type: string
+      - description: 'e.g.: id,desc / id,asc'
+        in: query
+        name: sort
+        type: string
+      responses:
+        "200":
+          description: ' '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+      security:
+      - Token: []
+      summary: Get List Pagination Transaction (permission = superadmin)
+      tags:
+      - Transaction Sales
+  /trxsales/myparking:
+    get:
+      operationId: GetMyParking
+      responses:
+        "200":
+          description: 'data: []model.ResMyParking'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResMyParkingList'
+            type: array
+        "500":
+          description: 'code: 500, message: "Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get My Parking Space (permission = merchant)
+      tags:
+      - Transaction Sales
+  /trxsales/myparking/slot/{id}:
+    get:
+      operationId: GetSlotMyParking
+      parameters:
+      - description: Parking Space ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: []model.ResSlotMyParking '
+          schema:
+            items:
+              $ref: '#/definitions/model.ResSlotMyParking'
+            type: array
+        "500":
+          description: 'code: 500, message: "Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get Slot My Parking Space (permission = merchant)
+      tags:
+      - Transaction Sales
+  /user:
+    get:
+      operationId: GetAllUser
+      parameters:
+      - description: ' '
+        in: query
+        name: filter
+        type: string
+      responses:
+        "200":
+          description: 'data: []entity.Users'
+          schema:
+            items:
+              $ref: '#/definitions/entity.Users'
+            type: array
+      security:
+      - Token: []
+      summary: Get All user (permission = superadmin)
+      tags:
+      - Master User
+    post:
+      operationId: CreateUser
+      parameters:
+      - description: new user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqUserCreate'
+      responses:
+        "201":
+          description: 'data: entity.Users, message: "Create User Success" '
+          schema:
+            $ref: '#/definitions/entity.Users'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Create User Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create User Superadmin or Admin (permission = superadmin)
+      tags:
+      - Master User
+  /user/:id/address:
+    delete:
+      operationId: DeleteUserAddress
+      parameters:
+      - description: User address' id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: Delete user address failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete User Address (permission = consumer)
+      tags:
+      - Master User
+  /user/{id}/delete:
+    delete:
+      operationId: DeleteByIDUser
+      parameters:
+      - description: userID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'message: "Success'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: 'code: 500, message: "Failed Delete User" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Delete Parking Space by ID (permission = superadmin)
+      tags:
+      - Master User
+  /user/address:
+    get:
+      operationId: GetAddressByUserID
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            items:
+              $ref: '#/definitions/entity.UsersAddress'
+            type: array
+        "500":
+          description: Inquiry User Address Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get User' Addresses (permission = consumer)
+      tags:
+      - Master User
+    post:
+      operationId: CreateAddress
+      parameters:
+      - description: id and primary fields are not mandatory
+        in: body
+        name: useraddress
+        required: true
+        schema:
+          $ref: '#/definitions/entity.UsersAddress'
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.UsersAddress'
+        "422":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Create User Address Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Create User Address (permission = consumer)
+      tags:
+      - Master User
+    put:
+      operationId: UpdateUserAddress
+      parameters:
+      - description: all fields are not mandatory
+        in: body
+        name: useraddress
+        required: true
+        schema:
+          $ref: '#/definitions/entity.UsersAddress'
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "401":
+          description: Invalid authorization
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "422":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: Create User Address Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update User Address (permission = consumer)
+      tags:
+      - Master User
+  /user/address/:id/switch:
+    put:
+      operationId: SwitchUserAddress
+      parameters:
+      - description: User address' id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: Switch Primary user address failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Switch Primary User Address (permission = consumer)
+      tags:
+      - Master User
+  /user/address/primary:
+    get:
+      operationId: GetPrimaryAddressByUserID
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.UsersAddress'
+        "500":
+          description: Inquiry User Address Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get User' Primary Address (permission = consumer)
+      tags:
+      - Master User
+  /user/changepassword:
+    put:
+      operationId: ChangePassword
+      parameters:
+      - description: change password user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqChangePassword'
+      responses:
+        "200":
+          description: 'message: "Change Password Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Change Password User Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Change password user (permission = all)
+      tags:
+      - Master User
+  /user/config:
+    get:
+      operationId: GetUserConfiguration
+      responses:
+        "200":
+          description: '{ "data": Model }'
+          schema:
+            $ref: '#/definitions/entity.UsersConfig'
+        "500":
+          description: Inquiry User Configuration Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Get User' Configuration (permission = consumer)
+      tags:
+      - Master User
+  /user/config/:rad:
+    put:
+      operationId: UpdateUserRadius
+      parameters:
+      - description: Radius in km
+        in: path
+        name: rad
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{"message": "Success"}'
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: Update Users Radius Configuration Failed
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update User Radius (permission = superadmin)
+      tags:
+      - Master User
+  /user/info:
+    get:
+      operationId: GetUser
+      responses:
+        "200":
+          description: data:model.ResUserAll
+          schema:
+            $ref: '#/definitions/model.ResUserAll'
+      security:
+      - Token: []
+      summary: Get user profile (permission = all)
+      tags:
+      - Master User
+  /user/info/{id}:
+    get:
+      operationId: GetUserByID
+      parameters:
+      - description: userID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: 'data: entity.Users'
+          schema:
+            $ref: '#/definitions/entity.Users'
+      security:
+      - Token: []
+      summary: Get user profile by ID (permission = superadmin)
+      tags:
+      - Master User
+  /user/merchant:
+    get:
+      operationId: GetUserMerchant
+      responses:
+        "200":
+          description: 'data: []model.ResUserMerchant'
+          schema:
+            items:
+              $ref: '#/definitions/model.ResUserMerchant'
+            type: array
+      security:
+      - Token: []
+      summary: Get All User Merchant Admin (permission = superadmin)
+      tags:
+      - Master User
+  /user/role/{id}/update:
+    put:
+      consumes:
+      - multipart/form-data
+      operationId: UpdateUserRole
+      parameters:
+      - description: usersID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Role ID
+        in: formData
+        name: roleID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'message: "Success" '
+          schema:
+            $ref: '#/definitions/model.ResponseSuccess'
+        "500":
+          description: 'code: 500, message: "Failed Update Role User" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update user role (permission = all)
+      tags:
+      - Master User
+  /user/update:
+    put:
+      operationId: UpdateUser
+      parameters:
+      - description: update user
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.ReqUserUpdate'
+      responses:
+        "200":
+          description: 'data: entity.Users'
+          schema:
+            $ref: '#/definitions/entity.Users'
+        "422":
+          description: 'code: 422, message: "Invalid request" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+        "500":
+          description: 'code: 500, message: "Update User Failed" '
+          schema:
+            $ref: '#/definitions/model.ResponseErrors'
+      security:
+      - Token: []
+      summary: Update user (permission = all)
+      tags:
+      - Master User
+swagger: "2.0"
