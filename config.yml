@@ -1,0 +1,45 @@
+env: production
+api:
+    host: api.streetbox.id
+    port: 2730
+jwtkey: 5tr33tb0x@0520
+path:
+    image: /opt/streetbox/image/
+    doc: /opt/streetbox/doc/
+    csv: /
+certificate:
+    dir: /opt/streetbox/certs
+    filename: 35.219.4.29
+googleapplicationcredentials: /streetbox-private-key.json
+web:
+    host: https://backoffice.streetbox.id
+    port:
+smpt:
+    host: smtp.gmail.com
+    port: 587
+    email: streetboxid.sysdev@gmail.com
+    password: StreetB0x123
+postgres:
+    port: 5432
+    host: 198.167.141.121
+    user: postgres
+    password: cbs-admin@2020
+    name: streetbox
+log:
+    filename: /var/log/streetbox/streetbox.log
+    maxsize: 500
+    maxage: 1
+xendit:
+    apikey: xnd_production_KYDQfiZNCDtQrza6V3s6Dze2pohTOvsxIlwyDROB42GQAr7v3A0mGA5VCMufA
+    callbackqristoken: cae7fd0a6856f455196d50fba90309e34feb370149ca4b85a2a9732693c75dbc
+    apihost: https://api.xendit.co
+    callbackqrisurl: https://api.streetbox.id/payment/xendit/qris/callback
+fcm:
+    servertoken1: AAAAuYtw0Ao:APA91bEL1-w8vfa8GAXJInAfLs0ymqYELN3PCLxvoxZBGj8ADRBNdE6vhcmb2bcrmk5AjADC5Dh_jJIrye1YxUyLyDAonMlDKwzmQUHpUj_-lWtip2p9PrEeTTDonOGr6-WD9OWQ7h4l
+    servertoken2: AAAAuYtw0Ao:APA91bHgRGeGrJ4vSKVd-zuvNKJffD6-GXXWnmPTIQMidHRWweD0Zf4gAwwtP23dVXw7OIIAQ_niyxniG0tjGQEXvik-P1RB1AKqbZrUZF3oA5jQX54Znl-wxD2GiCusaOaS0-IzswN5
+    servertoken3: AAAAuYtw0Ao:APA91bH1-MogqWO51OlnbL5I-_BwWROXovU_5ycF7rYwJAdhVZX7koAhRQd_BS4FRL8kv2yS4RzMfr8ftcfXiHUqC4SRRAudyqBNhCatuWi-egkhpxMySgk0acer8bQR-SFNcuZFY5zN
+    projectid: streetbox-276609
+topic:
+    orderonline: onlineOrder
+    trxpushnotif: trxPushNotif
+    visitorder: visitOrder
