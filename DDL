@@ -1,0 +1,2467 @@
+
+-- DROP SCHEMA public;
+
+CREATE SCHEMA public AUTHORIZATION "your-username-db";
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+
+-- DROP SEQUENCE public.app_setting_id_seq;
+
+CREATE SEQUENCE public.app_setting_id_seq
+	INCREMENT BY
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.app_setting_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.app_setting_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.canvassing_call_id_seq;
+
+CREATE SEQUENCE public.canvassing_call_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.canvassing_call_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.canvassing_call_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.canvassing_notif_id_seq;
+
+CREATE SEQUENCE public.canvassing_notif_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.canvassing_notif_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.canvassing_notif_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.homevisit_sales_id_seq1;
+
+CREATE SEQUENCE public.homevisit_sales_id_seq1
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.homevisit_sales_id_seq1 OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.homevisit_sales_id_seq1 TO your-username-db;
+
+-- DROP SEQUENCE public.log_activity_merchant_id_seq;
+
+CREATE SEQUENCE public.log_activity_merchant_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.log_activity_merchant_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.log_activity_merchant_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.log_xendit_request_id_seq;
+
+CREATE SEQUENCE public.log_xendit_request_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.log_xendit_request_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.log_xendit_request_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.merchant_category_id_seq;
+
+CREATE SEQUENCE public.merchant_category_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.merchant_category_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.merchant_category_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.merchant_id_seq;
+
+CREATE SEQUENCE public.merchant_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.merchant_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.merchant_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.merchant_menu_id_seq;
+
+CREATE SEQUENCE public.merchant_menu_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.merchant_menu_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.merchant_menu_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.merchant_tax_id_seq;
+
+CREATE SEQUENCE public.merchant_tax_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.merchant_tax_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.merchant_tax_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.merchant_users_id_seq;
+
+CREATE SEQUENCE public.merchant_users_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.merchant_users_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.merchant_users_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.merchant_users_shift_id_seq;
+
+CREATE SEQUENCE public.merchant_users_shift_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.merchant_users_shift_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.merchant_users_shift_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.parking_space_id_seq;
+
+CREATE SEQUENCE public.parking_space_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.parking_space_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.parking_space_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.parking_space_sales_id_seq;
+
+CREATE SEQUENCE public.parking_space_sales_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.parking_space_sales_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.parking_space_sales_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.payment_method_id_seq;
+
+CREATE SEQUENCE public.payment_method_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.payment_method_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.payment_method_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.payment_provider_id_seq1;
+
+CREATE SEQUENCE public.payment_provider_id_seq1
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.payment_provider_id_seq1 OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.payment_provider_id_seq1 TO your-username-db;
+
+-- DROP SEQUENCE public.role_id_seq;
+
+CREATE SEQUENCE public.role_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.role_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.role_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.tasks_homevisit_id_seq;
+
+CREATE SEQUENCE public.tasks_homevisit_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tasks_homevisit_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.tasks_homevisit_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.tasks_homevisit_log_id_seq;
+
+CREATE SEQUENCE public.tasks_homevisit_log_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tasks_homevisit_log_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.tasks_homevisit_log_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.tasks_id_seq1;
+
+CREATE SEQUENCE public.tasks_id_seq1
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tasks_id_seq1 OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.tasks_id_seq1 TO your-username-db;
+
+-- DROP SEQUENCE public.tasks_nonregular_id_seq;
+
+CREATE SEQUENCE public.tasks_nonregular_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tasks_nonregular_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.tasks_nonregular_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.tasks_nonregular_log_id_seq;
+
+CREATE SEQUENCE public.tasks_nonregular_log_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tasks_nonregular_log_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.tasks_nonregular_log_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.tasks_regular_id_seq;
+
+CREATE SEQUENCE public.tasks_regular_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tasks_regular_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.tasks_regular_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.tasks_regular_log_id_seq;
+
+CREATE SEQUENCE public.tasks_regular_log_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tasks_regular_log_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.tasks_regular_log_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_homevisit_menu_sales_id_seq;
+
+CREATE SEQUENCE public.trx_homevisit_menu_sales_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_homevisit_menu_sales_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_homevisit_menu_sales_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_homevisit_sales_id_seq;
+
+CREATE SEQUENCE public.trx_homevisit_sales_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_homevisit_sales_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_homevisit_sales_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_order_bill_id_seq;
+
+CREATE SEQUENCE public.trx_order_bill_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_order_bill_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_order_bill_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_order_id_seq;
+
+CREATE SEQUENCE public.trx_order_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_order_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_order_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_order_payment_sales_id_seq;
+
+CREATE SEQUENCE public.trx_order_payment_sales_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_order_payment_sales_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_order_payment_sales_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_order_product_sales_id_seq;
+
+CREATE SEQUENCE public.trx_order_product_sales_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_order_product_sales_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_order_product_sales_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_order_tax_sales_id_seq;
+
+CREATE SEQUENCE public.trx_order_tax_sales_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_order_tax_sales_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_order_tax_sales_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_parking_space_sales_id_seq;
+
+CREATE SEQUENCE public.trx_parking_space_sales_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_parking_space_sales_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_parking_space_sales_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_refund_id_seq;
+
+CREATE SEQUENCE public.trx_refund_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_refund_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_refund_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_refund_space_id_seq;
+
+CREATE SEQUENCE public.trx_refund_space_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_refund_space_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_refund_space_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_refund_visit_id_seq;
+
+CREATE SEQUENCE public.trx_refund_visit_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_refund_visit_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_refund_visit_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_sync_id_seq;
+
+CREATE SEQUENCE public.trx_sync_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_sync_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_sync_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.trx_visit_id_seq1;
+
+CREATE SEQUENCE public.trx_visit_id_seq1
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.trx_visit_id_seq1 OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.trx_visit_id_seq1 TO your-username-db;
+
+-- DROP SEQUENCE public.user_id_seq;
+
+CREATE SEQUENCE public.user_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.user_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.user_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.user_role_id_seq;
+
+CREATE SEQUENCE public.user_role_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.user_role_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.user_role_id_seq TO your-username-db;
+
+-- DROP SEQUENCE public.users_address_id_seq;
+
+CREATE SEQUENCE public.users_address_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.users_address_id_seq OWNER TO "your-username-db";
+GRANT ALL ON SEQUENCE public.users_address_id_seq TO your-username-db;
+-- public.app_setting definition
+
+-- Drop table
+
+-- DROP TABLE public.app_setting;
+
+CREATE TABLE public.app_setting (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	"key" varchar(255) NOT NULL,
+	value text NULL
+);
+
+-- Permissions
+
+ALTER TABLE public.app_setting OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.app_setting TO your-username-db;
+
+
+-- public.canvassing_call definition
+
+-- Drop table
+
+-- DROP TABLE public.canvassing_call;
+
+CREATE TABLE public.canvassing_call (
+	id bigserial NOT NULL,
+	foodtruck_id int8 NOT NULL,
+	customer_id int8 NOT NULL,
+	notif_id int8 NOT NULL,
+	created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	status text NOT NULL DEFAULT 'REQUEST'::text,
+	queue_no int4 NULL,
+	CONSTRAINT canvassing_call_pkey PRIMARY KEY (id)
+);
+
+-- Permissions
+
+ALTER TABLE public.canvassing_call OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.canvassing_call TO your-username-db;
+
+
+-- public.log_activity definition
+
+-- Drop table
+
+-- DROP TABLE public.log_activity;
+
+CREATE TABLE public.log_activity (
+	log_time timestamp NOT NULL,
+	activity text NOT NULL,
+	CONSTRAINT log_activity_pk PRIMARY KEY (log_time)
+);
+
+-- Permissions
+
+ALTER TABLE public.log_activity OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.log_activity TO your-username-db;
+
+
+-- public.merchant_category definition
+
+-- Drop table
+
+-- DROP TABLE public.merchant_category;
+
+CREATE TABLE public.merchant_category (
+	id serial4 NOT NULL,
+	category text NOT NULL,
+	hexcode text NULL,
+	CONSTRAINT merchant_category_pkey PRIMARY KEY (id),
+	CONSTRAINT unique_category UNIQUE (category)
+);
+
+-- Permissions
+
+ALTER TABLE public.merchant_category OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.merchant_category TO your-username-db;
+
+
+-- public.parking_space definition
+
+-- Drop table
+
+-- DROP TABLE public.parking_space;
+
+CREATE TABLE public.parking_space (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	"name" text NOT NULL,
+	address text NOT NULL,
+	latitude float8 NOT NULL,
+	longitude float8 NOT NULL,
+	description text NOT NULL,
+	total_space int4 NOT NULL,
+	start_time timestamp NOT NULL,
+	end_time timestamp NOT NULL,
+	rating numeric NOT NULL DEFAULT 0.0,
+	images_meta _text NULL,
+	documents_meta _text NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	landlord_info text NOT NULL DEFAULT ''::text,
+	start_contract date NOT NULL DEFAULT '0001-01-01'::date,
+	end_contract date NOT NULL DEFAULT '0001-01-01'::date,
+	city text NULL,
+	CONSTRAINT parking_space_pkey PRIMARY KEY (id)
+);
+
+-- Permissions
+
+ALTER TABLE public.parking_space OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.parking_space TO your-username-db;
+
+
+-- public.payment_provider definition
+
+-- Drop table
+
+-- DROP TABLE public.payment_provider;
+
+CREATE TABLE public.payment_provider (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	"name" varchar NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT payment_provider_pk PRIMARY KEY (id)
+);
+
+-- Permissions
+
+ALTER TABLE public.payment_provider OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.payment_provider TO your-username-db;
+
+
+-- public."role" definition
+
+-- Drop table
+
+-- DROP TABLE public."role";
+
+CREATE TABLE public."role" (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	"name" text NOT NULL,
+	description text NULL,
+	created_at timestamp(6) NOT NULL,
+	updated_at timestamp(6) NULL,
+	deleted_at timestamp(6) NULL,
+	CONSTRAINT role_pk PRIMARY KEY (id),
+	CONSTRAINT role_un UNIQUE (name)
+);
+
+-- Permissions
+
+ALTER TABLE public."role" OWNER TO "your-username-db";
+GRANT ALL ON TABLE public."role" TO your-username-db;
+
+
+-- public.trx definition
+
+-- Drop table
+
+-- DROP TABLE public.trx;
+
+CREATE TABLE public.trx (
+	id text NOT NULL,
+	"types" text NOT NULL, -- REGULAR;NONREGULAR;HOMEVISIT
+	users_id int8 NOT NULL DEFAULT '-1'::integer, -- Consumer ID
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	status text NOT NULL, -- PENDING;SUCCESS;FAILED
+	external_id text NULL, -- External ID Provided By Payment Provider
+	address text NOT NULL DEFAULT ''::text, -- Address Transaction
+	qr_code text NULL,
+	CONSTRAINT trx_pk PRIMARY KEY (id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.trx."types" IS 'REGULAR;NONREGULAR;HOMEVISIT';
+COMMENT ON COLUMN public.trx.users_id IS 'Consumer ID';
+COMMENT ON COLUMN public.trx.status IS 'PENDING;SUCCESS;FAILED';
+COMMENT ON COLUMN public.trx.external_id IS 'External ID Provided By Payment Provider';
+COMMENT ON COLUMN public.trx.address IS 'Address Transaction';
+
+-- Permissions
+
+ALTER TABLE public.trx OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx TO your-username-db;
+
+
+-- public.trx_refund definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_refund;
+
+CREATE TABLE public.trx_refund (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	"types" text NOT NULL, -- VISIT;SPACE
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT trx_refund_pk PRIMARY KEY (id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.trx_refund."types" IS 'VISIT;SPACE';
+
+-- Permissions
+
+ALTER TABLE public.trx_refund OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_refund TO your-username-db;
+
+
+-- public.users definition
+
+-- Drop table
+
+-- DROP TABLE public.users;
+
+CREATE TABLE public.users (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	user_name text NOT NULL,
+	created_at timestamp(6) NOT NULL,
+	updated_at timestamp(6) NULL,
+	deleted_at timestamp(6) NULL,
+	phone text NULL,
+	address text NULL,
+	"name" text NOT NULL DEFAULT ''::text,
+	plat_no text NULL, -- Foodtruck only
+	profile_picture text NULL,
+	registration_token text NULL, -- token from FCM SDK
+	CONSTRAINT user_pk PRIMARY KEY (id),
+	CONSTRAINT user_un UNIQUE (user_name)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.users.plat_no IS 'Foodtruck only';
+COMMENT ON COLUMN public.users.registration_token IS 'token from FCM SDK';
+
+-- Permissions
+
+ALTER TABLE public.users OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.users TO your-username-db;
+
+
+-- public.users_auth definition
+
+-- Drop table
+
+-- DROP TABLE public.users_auth;
+
+CREATE TABLE public.users_auth (
+	user_name text NOT NULL,
+	"password" text NOT NULL,
+	created_at timestamp(6) NOT NULL,
+	updated_at timestamp(6) NULL,
+	deleted_at timestamp(6) NULL,
+	device_id varchar NULL,
+	CONSTRAINT user_auth_pk PRIMARY KEY (user_name)
+);
+
+-- Permissions
+
+ALTER TABLE public.users_auth OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.users_auth TO your-username-db;
+
+
+-- public.users_config definition
+
+-- Drop table
+
+-- DROP TABLE public.users_config;
+
+CREATE TABLE public.users_config (
+	radius int4 NOT NULL
+);
+
+-- Permissions
+
+ALTER TABLE public.users_config OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.users_config TO your-username-db;
+
+
+-- public.log_xendit_request definition
+
+-- Drop table
+
+-- DROP TABLE public.log_xendit_request;
+
+CREATE TABLE public.log_xendit_request (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	trx_id text NOT NULL,
+	request_data text NOT NULL,
+	response_data text NOT NULL,
+	created_at timestamp NOT NULL,
+	CONSTRAINT log_xendit_request_pk PRIMARY KEY (id),
+	CONSTRAINT log_xendit_request_fk FOREIGN KEY (trx_id) REFERENCES public.trx(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.log_xendit_request OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.log_xendit_request TO your-username-db;
+
+
+-- public.merchant definition
+
+-- Drop table
+
+-- DROP TABLE public.merchant;
+
+CREATE TABLE public.merchant (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	"name" text NOT NULL,
+	address text NOT NULL,
+	phone text NOT NULL,
+	email text NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	logo text NULL, -- filename
+	banner text NULL, -- filename
+	city text NULL,
+	ig_account text NULL,
+	category_id int4 NULL DEFAULT 1,
+	terms text NULL,
+	xendit_id text NULL,
+	CONSTRAINT merchant_pkey PRIMARY KEY (id),
+	CONSTRAINT merchant_un UNIQUE (name),
+	CONSTRAINT merchant_category_fkey FOREIGN KEY (category_id) REFERENCES public.merchant_category(id) ON DELETE SET NULL ON UPDATE CASCADE
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.merchant.logo IS 'filename';
+COMMENT ON COLUMN public.merchant.banner IS 'filename';
+
+-- Permissions
+
+ALTER TABLE public.merchant OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.merchant TO your-username-db;
+
+
+-- public.merchant_menu definition
+
+-- Drop table
+
+-- DROP TABLE public.merchant_menu;
+
+CREATE TABLE public.merchant_menu (
+	id bigserial NOT NULL,
+	merchant_id int8 NULL,
+	"name" varchar(100) NOT NULL,
+	description text NOT NULL,
+	price int4 NOT NULL DEFAULT 0,
+	discount numeric NOT NULL DEFAULT 0.0,
+	photo text NULL,
+	created_at timestamp NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	qty int4 NOT NULL DEFAULT 0,
+	is_active bool NULL,
+	is_nearby bool NOT NULL DEFAULT true,
+	is_visit bool NOT NULL DEFAULT true,
+	CONSTRAINT merchant_menu_pkey PRIMARY KEY (id),
+	CONSTRAINT merchant_menu_merchant_id_fkey FOREIGN KEY (merchant_id) REFERENCES public.merchant(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.merchant_menu OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.merchant_menu TO your-username-db;
+
+
+-- public.merchant_tax definition
+
+-- Drop table
+
+-- DROP TABLE public.merchant_tax;
+
+CREATE TABLE public.merchant_tax (
+	id serial4 NOT NULL,
+	merchant_id int4 NOT NULL,
+	"name" varchar(30) NOT NULL,
+	amount float8 NOT NULL,
+	is_active bool NOT NULL DEFAULT false,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NOT NULL,
+	"type" int4 NOT NULL DEFAULT 0,
+	CONSTRAINT merchant_tax_pkey PRIMARY KEY (id),
+	CONSTRAINT merchant_tax_merchant_id_fkey FOREIGN KEY (merchant_id) REFERENCES public.merchant(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Permissions
+
+ALTER TABLE public.merchant_tax OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.merchant_tax TO your-username-db;
+
+
+-- public.merchant_users definition
+
+-- Drop table
+
+-- DROP TABLE public.merchant_users;
+
+CREATE TABLE public.merchant_users (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	merchant_id int8 NOT NULL,
+	users_id int8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	registration_token text NULL, -- token from FCM SDK
+	is_canvass_notif_manual bool NULL,
+	canvass_radius float8 NULL,
+	canvass_duration int4 NULL, -- Duration to expired session
+	CONSTRAINT merchant_users_pkey PRIMARY KEY (id),
+	CONSTRAINT merchant_users_fk FOREIGN KEY (merchant_id) REFERENCES public.merchant(id),
+	CONSTRAINT merchant_users_fk_1 FOREIGN KEY (users_id) REFERENCES public.users(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.merchant_users.registration_token IS 'token from FCM SDK';
+COMMENT ON COLUMN public.merchant_users.canvass_duration IS 'Duration to expired session';
+
+-- Permissions
+
+ALTER TABLE public.merchant_users OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.merchant_users TO your-username-db;
+
+
+-- public.merchant_users_shift definition
+
+-- Drop table
+
+-- DROP TABLE public.merchant_users_shift;
+
+CREATE TABLE public.merchant_users_shift (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	merchant_users_id int8 NOT NULL,
+	shift varchar(10) NOT NULL DEFAULT 'IN'::character varying, -- IN; OUT
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT merchant_users_shift_pk PRIMARY KEY (id),
+	CONSTRAINT merchant_users_shift_fk FOREIGN KEY (merchant_users_id) REFERENCES public.merchant_users(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.merchant_users_shift.shift IS 'IN; OUT';
+
+-- Permissions
+
+ALTER TABLE public.merchant_users_shift OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.merchant_users_shift TO your-username-db;
+
+
+-- public.parking_space_sales definition
+
+-- Drop table
+
+-- DROP TABLE public.parking_space_sales;
+
+CREATE TABLE public.parking_space_sales (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	start_date timestamp(0) NOT NULL,
+	end_date timestamp(0) NOT NULL,
+	total_slot int4 NOT NULL,
+	available_slot int4 NOT NULL,
+	point int8 NOT NULL,
+	parking_space_id int8 NOT NULL,
+	created_at timestamp(6) NOT NULL,
+	updated_at timestamp(6) NULL,
+	deleted_at timestamp(6) NULL,
+	CONSTRAINT parking_space_sales_pkey PRIMARY KEY (id),
+	CONSTRAINT fk_parkingspace_parkingspaceid FOREIGN KEY (parking_space_id) REFERENCES public.parking_space(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.parking_space_sales OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.parking_space_sales TO your-username-db;
+
+
+-- public.payment_method definition
+
+-- Drop table
+
+-- DROP TABLE public.payment_method;
+
+CREATE TABLE public.payment_method (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	"name" varchar NOT NULL,
+	"types" int2 NOT NULL, -- 1: cash, 2: e-wallet, 3: credit card, 4:debit card, 5: va
+	payment_provider_id int8 NOT NULL,
+	is_active bool NOT NULL DEFAULT false,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT payment_method_pk PRIMARY KEY (id),
+	CONSTRAINT payment_method_fk FOREIGN KEY (payment_provider_id) REFERENCES public.payment_provider(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.payment_method."types" IS '1: cash, 2: e-wallet, 3: credit card, 4:debit card, 5: va';
+
+-- Permissions
+
+ALTER TABLE public.payment_method OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.payment_method TO your-username-db;
+
+
+-- public.tasks definition
+
+-- Drop table
+
+-- DROP TABLE public.tasks;
+
+CREATE TABLE public.tasks (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	"types" varchar(25) NOT NULL, -- REGULAR, NONREGULAR, HOMEVISIT
+	merchant_users_id int8 NOT NULL, -- foodtruck (operator) id
+	status int2 NOT NULL, -- 1(open),2(ongoing),3(arrived),4(completed)
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT tasks_pk1 PRIMARY KEY (id),
+	CONSTRAINT tasks_merchant_fk FOREIGN KEY (merchant_users_id) REFERENCES public.merchant_users(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.tasks."types" IS 'REGULAR, NONREGULAR, HOMEVISIT';
+COMMENT ON COLUMN public.tasks.merchant_users_id IS 'foodtruck (operator) id';
+COMMENT ON COLUMN public.tasks.status IS '1(open),2(ongoing),3(arrived),4(completed)';
+
+-- Permissions
+
+ALTER TABLE public.tasks OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.tasks TO your-username-db;
+
+
+-- public.tasks_nonregular definition
+
+-- Drop table
+
+-- DROP TABLE public.tasks_nonregular;
+
+CREATE TABLE public.tasks_nonregular (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	tasks_id int8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT tasks_nonregular_pk PRIMARY KEY (id),
+	CONSTRAINT tasks_nonregular_fk FOREIGN KEY (tasks_id) REFERENCES public.tasks(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.tasks_nonregular OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.tasks_nonregular TO your-username-db;
+
+
+-- public.tasks_nonregular_log definition
+
+-- Drop table
+
+-- DROP TABLE public.tasks_nonregular_log;
+
+CREATE TABLE public.tasks_nonregular_log (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	tasks_nonregular_id int8 NOT NULL,
+	activity int2 NOT NULL, -- 1(Check In), 2(Check Out)
+	latitude float8 NOT NULL,
+	longitude float8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	address text NULL,
+	CONSTRAINT tasks_nonregular_log_pk PRIMARY KEY (id),
+	CONSTRAINT tasks_nonregular_log_fk FOREIGN KEY (tasks_nonregular_id) REFERENCES public.tasks_nonregular(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.tasks_nonregular_log.activity IS '1(Check In), 2(Check Out)';
+
+-- Permissions
+
+ALTER TABLE public.tasks_nonregular_log OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.tasks_nonregular_log TO your-username-db;
+
+
+-- public.tasks_tracking definition
+
+-- Drop table
+
+-- DROP TABLE public.tasks_tracking;
+
+CREATE TABLE public.tasks_tracking (
+	log_time timestamp NOT NULL,
+	tasks_id int8 NOT NULL,
+	latitude float8 NOT NULL,
+	longitude float8 NOT NULL,
+	CONSTRAINT tasks_tracking_fk FOREIGN KEY (tasks_id) REFERENCES public.tasks(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.tasks_tracking OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.tasks_tracking TO your-username-db;
+
+
+-- public.trx_order definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_order;
+
+CREATE TABLE public.trx_order (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	order_no text NULL,
+	bill_no text NULL,
+	is_close bool NOT NULL, -- POS Order is closed or not
+	note text NULL,
+	"types" int2 NULL, -- 0: Offline 1: Online
+	business_date date NULL,
+	total_discount float8 NOT NULL DEFAULT 0,
+	grand_total float8 NOT NULL DEFAULT 0,
+	trx_id text NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	unique_id text NULL,
+	merchant_users_id int8 NOT NULL,
+	payment_method_id varchar NULL,
+	payment_method_name varchar NULL,
+	type_order varchar NULL,
+	type_payment varchar NULL,
+	CONSTRAINT trx_order_pk PRIMARY KEY (id),
+	CONSTRAINT trxorder_merchantusers_fk FOREIGN KEY (merchant_users_id) REFERENCES public.merchant_users(id),
+	CONSTRAINT trxorder_trx_trxid FOREIGN KEY (trx_id) REFERENCES public.trx(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.trx_order.is_close IS 'POS Order is closed or not';
+COMMENT ON COLUMN public.trx_order."types" IS '0: Offline 1: Online';
+
+-- Permissions
+
+ALTER TABLE public.trx_order OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_order TO your-username-db;
+
+
+-- public.trx_order_bill definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_order_bill;
+
+CREATE TABLE public.trx_order_bill (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	bill_no text NULL,
+	is_close bool NOT NULL, -- Pos Order Is Close or Not
+	total_discount float8 NOT NULL DEFAULT 0,
+	sub_total float8 NOT NULL DEFAULT 0,
+	total_tax float8 NOT NULL DEFAULT 0,
+	grand_total float8 NOT NULL DEFAULT 0,
+	business_date date NULL,
+	trx_order_id int8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	unique_id text NULL,
+	order_unique_id text NULL,
+	CONSTRAINT trx_order_bill_pk PRIMARY KEY (id),
+	CONSTRAINT trxorderbill_trxorder_fk FOREIGN KEY (trx_order_id) REFERENCES public.trx_order(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.trx_order_bill.is_close IS 'Pos Order Is Close or Not';
+
+-- Permissions
+
+ALTER TABLE public.trx_order_bill OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_order_bill TO your-username-db;
+
+
+-- public.trx_order_payment_sales definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_order_payment_sales;
+
+CREATE TABLE public.trx_order_payment_sales (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	"name" text NOT NULL,
+	amount float8 NOT NULL DEFAULT 0,
+	unique_id text NULL,
+	created_at timestamp NULL,
+	updated_at timestamp NULL,
+	payment_method_id int8 NOT NULL,
+	trx_order_bill_id int8 NOT NULL,
+	order_bill_unique_id text NULL,
+	order_unique_id text NULL,
+	CONSTRAINT trx_order_payment_sales_pk PRIMARY KEY (id),
+	CONSTRAINT trx_order_payment_sales_fk FOREIGN KEY (payment_method_id) REFERENCES public.payment_method(id),
+	CONSTRAINT trx_order_payment_sales_order_bill_id_fkey FOREIGN KEY (trx_order_bill_id) REFERENCES public.trx_order_bill(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Permissions
+
+ALTER TABLE public.trx_order_payment_sales OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_order_payment_sales TO your-username-db;
+
+
+-- public.trx_order_product_sales definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_order_product_sales;
+
+CREATE TABLE public.trx_order_product_sales (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	unique_id text NULL,
+	trx_order_bill_id int8 NOT NULL,
+	merchant_menu_id int8 NOT NULL,
+	"name" text NOT NULL,
+	price float8 NOT NULL DEFAULT 0,
+	qty int2 NOT NULL DEFAULT 0,
+	business_date timestamp NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	notes text NULL,
+	order_bill_unique_id text NULL,
+	order_unique_id text NULL,
+	CONSTRAINT trx_order_product_sales_pk PRIMARY KEY (id),
+	CONSTRAINT trxorderproductsales_merchantmenu_fk FOREIGN KEY (merchant_menu_id) REFERENCES public.merchant_menu(id),
+	CONSTRAINT trxorderproductsales_trxorderbill_fk FOREIGN KEY (trx_order_bill_id) REFERENCES public.trx_order_bill(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.trx_order_product_sales OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_order_product_sales TO your-username-db;
+
+
+-- public.trx_order_tax_sales definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_order_tax_sales;
+
+CREATE TABLE public.trx_order_tax_sales (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	unique_id text NULL,
+	trx_order_bill_id int8 NOT NULL,
+	"name" text NOT NULL,
+	amount float8 NOT NULL DEFAULT 0,
+	"types" int2 NOT NULL DEFAULT 0, -- 0: Exclusive, 1: Inclusive
+	order_bill_unique_id text NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	merchant_tax_id int8 NOT NULL,
+	order_unique_id text NULL,
+	CONSTRAINT trx_order_tax_sales_pk PRIMARY KEY (id),
+	CONSTRAINT trxordertaxsales_merchanttax_fk FOREIGN KEY (merchant_tax_id) REFERENCES public.merchant_tax(id),
+	CONSTRAINT trxordertaxsales_trxorderbill_fk FOREIGN KEY (trx_order_bill_id) REFERENCES public.trx_order_bill(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.trx_order_tax_sales."types" IS '0: Exclusive, 1: Inclusive';
+
+-- Permissions
+
+ALTER TABLE public.trx_order_tax_sales OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_order_tax_sales TO your-username-db;
+
+
+-- public.trx_parking_space_sales definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_parking_space_sales;
+
+CREATE TABLE public.trx_parking_space_sales (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	parking_space_sales_id int8 NOT NULL,
+	merchant_id int8 NOT NULL,
+	total_slot int4 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT trx_parking_space_sales_pkey PRIMARY KEY (id),
+	CONSTRAINT fk_merchant_merchantid FOREIGN KEY (merchant_id) REFERENCES public.merchant(id),
+	CONSTRAINT fk_pss_parkingspacesalesid FOREIGN KEY (parking_space_sales_id) REFERENCES public.parking_space_sales(id)
+);
+CREATE INDEX fki_fk_merchant_merchantid ON public.trx_parking_space_sales USING btree (merchant_id);
+
+-- Permissions
+
+ALTER TABLE public.trx_parking_space_sales OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_parking_space_sales TO your-username-db;
+
+
+-- public.trx_refund_space definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_refund_space;
+
+CREATE TABLE public.trx_refund_space (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	trx_parking_space_sales_id int8 NOT NULL,
+	amount int8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	trx_refund_id int8 NOT NULL,
+	CONSTRAINT trx_refund_space_pk PRIMARY KEY (id),
+	CONSTRAINT trx_refund_space_fk FOREIGN KEY (trx_refund_id) REFERENCES public.trx_refund(id),
+	CONSTRAINT trxrefundspace_trxparkingspacesales_fk FOREIGN KEY (trx_parking_space_sales_id) REFERENCES public.trx_parking_space_sales(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.trx_refund_space OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_refund_space TO your-username-db;
+
+
+-- public.trx_sync definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_sync;
+
+CREATE TABLE public.trx_sync (
+	id serial4 NOT NULL,
+	unique_id text NOT NULL,
+	status int4 NOT NULL DEFAULT 0, -- 0:processing, 1:succeed, -1:failed
+	business_date date NOT NULL,
+	sync_date timestamp NOT NULL,
+	"data" text NOT NULL,
+	merchant_id int4 NOT NULL,
+	CONSTRAINT trx_sync_pkey PRIMARY KEY (id),
+	CONSTRAINT trx_sync_merchant_id_fkey FOREIGN KEY (merchant_id) REFERENCES public.merchant(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.trx_sync.status IS '0:processing, 1:succeed, -1:failed';
+
+-- Permissions
+
+ALTER TABLE public.trx_sync OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_sync TO your-username-db;
+
+
+-- public.trx_visit definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_visit;
+
+CREATE TABLE public.trx_visit (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	trx_id text NOT NULL,
+	grand_total float8 NOT NULL DEFAULT 0,
+	payment_method_id int8 NOT NULL,
+	customer_name text NOT NULL,
+	address text NOT NULL,
+	phone text NULL,
+	notes text NULL,
+	longitude float8 NOT NULL DEFAULT 0,
+	latitude float8 NOT NULL DEFAULT 0,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT trx_visit_pk PRIMARY KEY (id),
+	CONSTRAINT trxvisit_paymentmethod_fk FOREIGN KEY (payment_method_id) REFERENCES public.payment_method(id),
+	CONSTRAINT trxvisit_trx_fk FOREIGN KEY (trx_id) REFERENCES public.trx(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.trx_visit OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_visit TO your-username-db;
+
+
+-- public.users_address definition
+
+-- Drop table
+
+-- DROP TABLE public.users_address;
+
+CREATE TABLE public.users_address (
+	id bigserial NOT NULL,
+	user_id int8 NOT NULL,
+	person text NOT NULL,
+	address text NOT NULL,
+	phone text NOT NULL,
+	"primary" bool NOT NULL DEFAULT false,
+	address_name text NULL,
+	longitude float8 NULL,
+	latitude float8 NULL,
+	CONSTRAINT users_address_pk PRIMARY KEY (id),
+	CONSTRAINT users_fk FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Permissions
+
+ALTER TABLE public.users_address OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.users_address TO your-username-db;
+
+
+-- public.users_location definition
+
+-- Drop table
+
+-- DROP TABLE public.users_location;
+
+CREATE TABLE public.users_location (
+	id int8 NOT NULL,
+	longitude float8 NOT NULL,
+	latitude float8 NOT NULL,
+	CONSTRAINT users_location_pkey PRIMARY KEY (id),
+	CONSTRAINT users_fk FOREIGN KEY (id) REFERENCES public.users(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.users_location OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.users_location TO your-username-db;
+
+
+-- public.users_role definition
+
+-- Drop table
+
+-- DROP TABLE public.users_role;
+
+CREATE TABLE public.users_role (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	users_id int8 NOT NULL,
+	role_id int8 NOT NULL,
+	created_at timestamp(6) NOT NULL,
+	updated_at timestamp(6) NULL,
+	deleted_at timestamp(6) NULL,
+	CONSTRAINT user_role_pk PRIMARY KEY (id),
+	CONSTRAINT user_role_fk FOREIGN KEY (users_id) REFERENCES public.users(id),
+	CONSTRAINT user_role_fk_1 FOREIGN KEY (role_id) REFERENCES public."role"(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.users_role OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.users_role TO your-username-db;
+
+
+-- public.canvassing definition
+
+-- Drop table
+
+-- DROP TABLE public.canvassing;
+
+CREATE TABLE public.canvassing (
+	id int8 NOT NULL,
+	radius float8 NOT NULL,
+	"interval" int4 NOT NULL,
+	is_active bool NOT NULL DEFAULT false,
+	last_auto_blast timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	expire int4 NOT NULL DEFAULT 0,
+	cooldown int4 NOT NULL DEFAULT 0,
+	CONSTRAINT canvassing_pkey PRIMARY KEY (id),
+	CONSTRAINT merchant_fk FOREIGN KEY (id) REFERENCES public.merchant(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.canvassing OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.canvassing TO your-username-db;
+
+
+-- public.canvassing_notif definition
+
+-- Drop table
+
+-- DROP TABLE public.canvassing_notif;
+
+CREATE TABLE public.canvassing_notif (
+	id bigserial NOT NULL,
+	foodtruck_id int8 NOT NULL,
+	customer_id int8 NOT NULL,
+	created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	status text NOT NULL DEFAULT 'ONGOING'::text,
+	customer_token text NULL,
+	CONSTRAINT canvassing_notif_pkey PRIMARY KEY (id),
+	CONSTRAINT customer_fk FOREIGN KEY (customer_id) REFERENCES public.users(id),
+	CONSTRAINT foodtruck_fk FOREIGN KEY (foodtruck_id) REFERENCES public.merchant_users(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.canvassing_notif OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.canvassing_notif TO your-username-db;
+
+
+-- public.foodtruck_blast definition
+
+-- Drop table
+
+-- DROP TABLE public.foodtruck_blast;
+
+CREATE TABLE public.foodtruck_blast (
+	id int8 NOT NULL,
+	last_blast timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	is_auto_blast bool NOT NULL DEFAULT false,
+	CONSTRAINT foodtruck_blast_pkey PRIMARY KEY (id),
+	CONSTRAINT foodtruck_fk FOREIGN KEY (id) REFERENCES public.merchant_users(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.foodtruck_blast OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.foodtruck_blast TO your-username-db;
+
+
+-- public.foodtruck_location definition
+
+-- Drop table
+
+-- DROP TABLE public.foodtruck_location;
+
+CREATE TABLE public.foodtruck_location (
+	id int8 NOT NULL,
+	longitude float8 NOT NULL,
+	latitude float8 NOT NULL,
+	CONSTRAINT merchant_location_fk PRIMARY KEY (id),
+	CONSTRAINT merchant_location_id_unique UNIQUE (id),
+	CONSTRAINT merchant_users_fk FOREIGN KEY (id) REFERENCES public.merchant_users(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.foodtruck_location OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.foodtruck_location TO your-username-db;
+
+
+-- public.homevisit_sales definition
+
+-- Drop table
+
+-- DROP TABLE public.homevisit_sales;
+
+CREATE TABLE public.homevisit_sales (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	merchant_id int8 NOT NULL,
+	start_date timestamp NOT NULL,
+	end_date timestamp NOT NULL,
+	deposit int8 NOT NULL,
+	total int4 NOT NULL,
+	available int4 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT homevisit_sales_pk PRIMARY KEY (id),
+	CONSTRAINT homevisit_sales_fk FOREIGN KEY (merchant_id) REFERENCES public.merchant(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.homevisit_sales OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.homevisit_sales TO your-username-db;
+
+
+-- public.log_activity_merchant definition
+
+-- Drop table
+
+-- DROP TABLE public.log_activity_merchant;
+
+CREATE TABLE public.log_activity_merchant (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	merchant_id int8 NOT NULL,
+	log_time timestamp NOT NULL,
+	activity text NOT NULL,
+	CONSTRAINT log_activity_merchant_pk PRIMARY KEY (id),
+	CONSTRAINT log_activity_merchant_fk FOREIGN KEY (merchant_id) REFERENCES public.merchant(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.log_activity_merchant OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.log_activity_merchant TO your-username-db;
+
+
+-- public.tasks_regular definition
+
+-- Drop table
+
+-- DROP TABLE public.tasks_regular;
+
+CREATE TABLE public.tasks_regular (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	tasks_id int8 NOT NULL,
+	trx_parking_space_sales_id int8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	schedule_date date NOT NULL,
+	CONSTRAINT tasks_regular_pk PRIMARY KEY (id),
+	CONSTRAINT tasks_regular_fk FOREIGN KEY (tasks_id) REFERENCES public.tasks(id),
+	CONSTRAINT tasks_regular_fk_1 FOREIGN KEY (trx_parking_space_sales_id) REFERENCES public.trx_parking_space_sales(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.tasks_regular OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.tasks_regular TO your-username-db;
+
+
+-- public.tasks_regular_log definition
+
+-- Drop table
+
+-- DROP TABLE public.tasks_regular_log;
+
+CREATE TABLE public.tasks_regular_log (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	tasks_regular_id int8 NOT NULL,
+	activity int2 NOT NULL, -- 1(Check In), 2(Check Out)
+	latitude float8 NOT NULL,
+	longitude float8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT tasks_regular_log_pk PRIMARY KEY (id),
+	CONSTRAINT tasks_regular_log_fk FOREIGN KEY (tasks_regular_id) REFERENCES public.tasks_regular(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.tasks_regular_log.activity IS '1(Check In), 2(Check Out)';
+
+-- Permissions
+
+ALTER TABLE public.tasks_regular_log OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.tasks_regular_log TO your-username-db;
+
+
+-- public.trx_homevisit_sales definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_homevisit_sales;
+
+CREATE TABLE public.trx_homevisit_sales (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	homevisit_sales_id int8 NOT NULL,
+	total int4 NOT NULL, -- Subtotal
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	trx_visit_id int8 NOT NULL,
+	status text NOT NULL DEFAULT 'OPEN'::text, -- OPEN;CLOSED
+	CONSTRAINT trx_homevisit_sales_pk PRIMARY KEY (id),
+	CONSTRAINT trx_homevisit_sales_fk FOREIGN KEY (homevisit_sales_id) REFERENCES public.homevisit_sales(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.trx_homevisit_sales.total IS 'Subtotal';
+COMMENT ON COLUMN public.trx_homevisit_sales.status IS 'OPEN;CLOSED';
+
+-- Permissions
+
+ALTER TABLE public.trx_homevisit_sales OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_homevisit_sales TO your-username-db;
+
+
+-- public.trx_refund_visit definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_refund_visit;
+
+CREATE TABLE public.trx_refund_visit (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	trx_homevisit_sales_id int8 NOT NULL,
+	amount int8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	trx_refund_id int8 NOT NULL,
+	CONSTRAINT trx_refund_visit_pk PRIMARY KEY (id),
+	CONSTRAINT trxrefundvisit_trxhomevisitsalesfk FOREIGN KEY (trx_homevisit_sales_id) REFERENCES public.trx_homevisit_sales(id),
+	CONSTRAINT trxrefundvisit_trxrefund_fk FOREIGN KEY (trx_refund_id) REFERENCES public.trx_refund(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.trx_refund_visit OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_refund_visit TO your-username-db;
+
+
+-- public.tasks_homevisit definition
+
+-- Drop table
+
+-- DROP TABLE public.tasks_homevisit;
+
+CREATE TABLE public.tasks_homevisit (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	tasks_id int8 NOT NULL,
+	trx_homevisit_sales_id int8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT tasks_homevisit_pk PRIMARY KEY (id),
+	CONSTRAINT tasks_homevisit_fk_1 FOREIGN KEY (tasks_id) REFERENCES public.tasks(id),
+	CONSTRAINT taskshomevisit_trxhomevisitsales_fk FOREIGN KEY (trx_homevisit_sales_id) REFERENCES public.trx_homevisit_sales(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.tasks_homevisit OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.tasks_homevisit TO your-username-db;
+
+
+-- public.tasks_homevisit_log definition
+
+-- Drop table
+
+-- DROP TABLE public.tasks_homevisit_log;
+
+CREATE TABLE public.tasks_homevisit_log (
+	id int8 NOT NULL GENERATED ALWAYS AS IDENTITY,
+	tasks_homevisit_id int8 NOT NULL,
+	activity int2 NOT NULL, -- 1(Check In), 2(Check Out)
+	latitude float8 NOT NULL,
+	longitude float8 NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT tasks_homevisit_log_pk PRIMARY KEY (id),
+	CONSTRAINT tasks_homevisit_log_fk FOREIGN KEY (tasks_homevisit_id) REFERENCES public.tasks_homevisit(id)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.tasks_homevisit_log.activity IS '1(Check In), 2(Check Out)';
+
+-- Permissions
+
+ALTER TABLE public.tasks_homevisit_log OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.tasks_homevisit_log TO your-username-db;
+
+
+-- public.trx_homevisit_menu_sales definition
+
+-- Drop table
+
+-- DROP TABLE public.trx_homevisit_menu_sales;
+
+CREATE TABLE public.trx_homevisit_menu_sales (
+	id bigserial NOT NULL,
+	trx_homevisit_sales_id int8 NOT NULL,
+	menu_id int8 NOT NULL,
+	quantity int4 NOT NULL,
+	created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp NULL,
+	deleted_at timestamp NULL,
+	CONSTRAINT trx_homevisit_menu_sales_pkey PRIMARY KEY (id),
+	CONSTRAINT menu_id_fk FOREIGN KEY (menu_id) REFERENCES public.merchant_menu(id),
+	CONSTRAINT trx_homevisit_sales_fk FOREIGN KEY (trx_homevisit_sales_id) REFERENCES public.trx_homevisit_sales(id)
+);
+
+-- Permissions
+
+ALTER TABLE public.trx_homevisit_menu_sales OWNER TO "your-username-db";
+GRANT ALL ON TABLE public.trx_homevisit_menu_sales TO your-username-db;
+
+
+
+CREATE OR REPLACE FUNCTION public.count_checkin(space_id bigint)
+ RETURNS integer
+ LANGUAGE plpgsql
+AS $function$
+	declare
+		tasks_reg_rec record;
+	begin
+		for tasks_reg_rec in (
+			select count(trl.id) as checkin from tasks_regular tr 
+			LEFT JOIN tasks_regular_log trl ON tr.id = trl.tasks_regular_id 
+			LEFT JOIN trx_parking_space_sales tpss ON tr.trx_parking_space_sales_id = tpss.id 
+			LEFT JOIN parking_space_sales pss ON tpss.parking_space_sales_id = pss.id 
+			LEFT JOIN parking_space ps ON pss.parking_space_id = ps.id
+			where pss.parking_space_id = space_id AND to_char(trl.updated_at,'yyyy-MM-dd') = current_date::text
+		)
+		loop 
+			RETURN tasks_reg_rec.checkin;
+		end loop;
+	END;
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.count_checkin(int8) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.count_checkin(int8) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.daily_quota_spot(trxsalesid bigint, scheduledate date)
+ RETURNS integer
+ LANGUAGE plpgsql
+AS $function$
+	declare
+		tasks_reg_rec record;
+		sumTasks int4 := 0;
+		totalSlot int4 := 0;
+	begin
+		for tasks_reg_rec in (
+			select * from tasks_regular 
+			where trx_parking_space_sales_id = trxSalesId 
+			and schedule_date = scheduleDate
+		)
+		loop 
+			sumTasks = sumTasks + 1;
+		end loop;
+		select total_slot into totalSlot from trx_parking_space_sales where id = trxSalesId;
+		return totalSlot - sumTasks;
+	END;
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.daily_quota_spot(int8,date) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.daily_quota_spot(int8,date) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.distance(lat1 double precision, lon1 double precision, lat2 double precision, lon2 double precision, OUT distance double precision)
+ RETURNS double precision
+ LANGUAGE plpgsql
+AS $function$
+DECLARE                                                   
+    x float = 111.12 * (lat2 - lat1);                           
+    y float = 111.12 * (lon2 - lon1) * cos(lat1 / 92.215);        
+BEGIN                                                     
+    distance := sqrt(x * x + y * y);                               
+END  
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.distance(float8,float8,float8,float8) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.distance(float8,float8,float8,float8) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.get_all_trx_space()
+ RETURNS TABLE(id bigint, merchant_name text, space_name text, start_date timestamp without time zone, end_date timestamp without time zone, total_slot integer, point bigint, status text)
+ LANGUAGE plpgsql
+AS $function$
+begin
+  return query    
+     select t.id,m.name as merchant_name, ps.name as space_name,
+     pss.start_date, pss.end_date, t.total_slot, pss.point, 
+	 case when ((select COUNT(*) from trx_refund_space trs where t.id = trs.trx_parking_space_sales_id) > 0) then 'REFUNDED'
+	 else 'SUCCESS' end as status
+	 from trx_parking_space_sales t
+	 JOIN merchant m on t.merchant_id = m.id
+	 JOIN parking_space_sales pss on t.parking_space_sales_id = pss.id
+	 JOIN parking_space ps on pss.parking_space_id = ps.id
+	 where t.deleted_at is null
+	 order by pss.start_date desc;
+	 end;
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.get_all_trx_space() OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.get_all_trx_space() TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.get_all_trx_visit(merchantid integer)
+ RETURNS TABLE(id bigint, customer_name text, start_date timestamp without time zone, end_date timestamp without time zone, deposit bigint, trx_id text, transaction_date timestamp without time zone, status text)
+ LANGUAGE plpgsql
+AS $function$
+begin
+  return query    
+     select ths.id, tv.customer_name as customer_name, hs.start_date, hs.end_date, hs.deposit, tv.trx_id, tv.created_at, 
+     case when ((select count(*) from trx_refund_visit trv where ths.id = trv.trx_homevisit_sales_id) > 0) then 'REFUNDED'
+     else t.status end as status
+     from trx_visit tv
+     JOIN trx_homevisit_sales ths on tv.id = ths.trx_visit_id
+     JOIN homevisit_sales hs ON ths.homevisit_sales_id = hs.id
+     join trx t on tv.trx_id = t.id
+     where hs.merchant_id = merchantid;
+	 end;
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.get_all_trx_visit(int4) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.get_all_trx_visit(int4) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.get_all_trx_visit(merchantid integer, date text)
+ RETURNS TABLE(id integer, customer_name text, start_date text, deposit bigint, status text)
+ LANGUAGE plpgsql
+AS $function$
+begin
+  return query    
+     select tv.id, tv.customer_name, TO_CHAR(hs.start_date, 'yyyy-mm-dd') as date, hs.deposit,
+     case when ((select count(*) from trx_refund_visit trv where ths.id = trv.trx_homevisit_sales_id) > 0) then 'REFUNDED'
+     else tv.status end as status
+     from trx_visit tv
+     JOIN trx_homevisit_sales ths on tv.id = ths.trx_visit_id
+     JOIN homevisit_sales hs ON ths.homevisit_sales_id = hs.id
+     where hs.merchant_id = merchantId
+     and TO_CHAR(hs.start_date, 'yyyy-mm-dd') = date;
+	 end;
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.get_all_trx_visit(int4,text) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.get_all_trx_visit(int4,text) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.livetracking(userlat double precision, userlon double precision, distance double precision)
+ RETURNS TABLE(typess text, lat double precision, lon double precision, merchant_id bigint, merchant_name text, logo text, tasks_id bigint, nearby double precision, log_time timestamp without time zone, banner text, ig_account text, status integer)
+ LANGUAGE plpgsql
+AS $function$
+declare
+	tracking_rec record;
+	tasks_rec record;
+	near double precision;
+begin
+	for tasks_rec in (
+		select t.id, t."types", m.id as merchant_id, m."name", m.logo, m.banner, m.ig_account, t.status from tasks t
+		left join merchant_users mu on t.merchant_users_id = mu.id 
+		left join merchant m on mu.merchant_id = m.id 
+		where (t.status = 2 or t.status = 3) and t.deleted_at is null
+	)
+	loop
+		for tracking_rec in (
+			select tt.* from tasks_tracking tt
+			where tt.tasks_id = tasks_rec.id order by tt.log_time desc limit 1
+		) 
+		loop 
+			near = distance(userLat,userLon,tracking_rec.latitude,tracking_rec.longitude);
+			if near <= distance then 
+				typess := tasks_rec."types";
+				lat := tracking_rec.latitude;
+				lon := tracking_rec.longitude;
+				merchant_id := tasks_rec.merchant_id;
+				merchant_name := tasks_rec."name";
+				logo := tasks_rec.logo;
+				tasks_id := tasks_rec.id;
+				nearby := round(cast(near as numeric),2);
+				log_time := tracking_rec.log_time;
+				banner := tasks_rec.banner;
+				ig_account := tasks_rec.ig_account;
+				status := tasks_rec.status;
+				return next;
+			end if;
+		end loop;
+	end loop;
+end;	
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.livetracking(float8,float8,float8) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.livetracking(float8,float8,float8) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.merchant_nearby(limits integer, pages integer, userlat double precision, userlon double precision, distance double precision)
+ RETURNS TABLE(logo text, banner text, merchant_id bigint, merchant_users_id bigint, merchant_name text, address text, latitude double precision, longitude double precision, nearby double precision, typess text, ig_account text, merchant_category text, category_color text, city text, updated_at timestamp without time zone, types_id bigint, status integer)
+ LANGUAGE plpgsql
+AS $function$
+declare
+	merchant_rec record;
+	near double precision;
+begin
+	for merchant_rec in (
+		select m.logo,m.banner, m.id, mu.id as merchant_users_id ,m."name" , ps.address, trl.latitude, trl.longitude, t."types", m.ig_account, mc.category as merchant_category, mc.hexcode as category_color, m.city, t.updated_at, tr.id as types_id, t.status from tasks t 
+		left join merchant_users  mu on t.merchant_users_id = mu.id 
+		left join merchant m on mu.merchant_id = m.id 
+		left join merchant_category  mc on m.category_id = mc.id 
+		left join tasks_regular tr on t.id = tr.tasks_id 
+		left join tasks_regular_log trl on tr.id = trl.tasks_regular_id 
+		left join trx_parking_space_sales trx on tr.trx_parking_space_sales_id = trx.id 
+		left join parking_space_sales pss on trx.parking_space_sales_id = pss.id 
+		left join parking_space ps on pss.parking_space_id = ps.id 
+		where 
+		t."types" = 'REGULAR' 
+		and t.status > 2 
+		and t.deleted_at is null 
+		and to_char(t.updated_at,'yyyy-MM-dd') = current_date::text 
+		and to_char(trl.updated_at,'yyyy-MM-dd') = current_date::text
+		union
+		select m.logo,m.banner, m.id, mu.id as merchant_users_id ,m."name" , tnl.address, tnl.latitude, tnl.longitude, t."types", m.ig_account, mc.category as merchant_category, mc.hexcode as category_color, m.city, t.updated_at, tn.id as types_id, t.status from tasks t 
+		left join merchant_users  mu on t.merchant_users_id = mu.id 
+		left join merchant m on mu.merchant_id = m.id 
+		left join merchant_category  mc on m.category_id = mc.id 
+		left join tasks_nonregular tn on t.id = tn.tasks_id 
+		left join tasks_nonregular_log tnl on tn.id = tnl.tasks_nonregular_id 
+		where 
+		t."types" = 'NONREGULAR' 
+		and t.status > 2
+		and t.deleted_at is null
+		and to_char(t.updated_at,'yyyy-MM-dd') = current_date::text 
+		and to_char(tnl.updated_at,'yyyy-MM-dd') = current_date::text
+		union
+		select m.logo,m.banner, m.id, mu.id as merchant_users_id ,m."name" , tv.address, thl.latitude, thl.longitude, t."types", m.ig_account, mc.category as merchant_category, mc.hexcode as category_color, m.city, t.updated_at, th.id as types_id, t.status from tasks t
+		left join merchant_users  mu on t.merchant_users_id = mu.id 
+		left join merchant m on mu.merchant_id = m.id 
+		left join merchant_category  mc on m.category_id = mc.id 
+		left join tasks_homevisit th on t.id = th.tasks_id 
+		left join tasks_homevisit_log thl on th.id = thl.tasks_homevisit_id 
+		left join trx_homevisit_sales ths on th.trx_homevisit_sales_id = ths.id 
+		left join trx_visit tv on ths.trx_visit_id = tv.id 
+		where 
+		t."types" = 'HOMEVISIT' 
+		and t.status > 2
+		and t.deleted_at is null
+		and to_char(t.updated_at,'yyyy-MM-dd') = current_date::text 
+		and to_char(thl.updated_at,'yyyy-MM-dd') = current_date::text
+		limit limits offset pages
+	) 
+	loop 
+		near = distance(userlat,userlon,merchant_rec.latitude,merchant_rec.longitude);
+		if near <= distance then 
+			logo := merchant_rec.logo;
+			banner := merchant_rec.banner;
+			merchant_id := merchant_rec.id;
+			merchant_users_id := merchant_rec.merchant_users_id;
+			merchant_name := merchant_rec."name";
+			address := merchant_rec.address;
+			latitude := merchant_rec.latitude;
+			longitude := merchant_rec.longitude;
+			nearby := round(cast(near as numeric),2);
+			typess := merchant_rec.types;
+			ig_account := merchant_rec.ig_account;
+			merchant_category := merchant_rec.merchant_category;
+			category_color := merchant_rec.category_color;
+			city := merchant_rec.city;
+			updated_at := merchant_rec.updated_at;
+			types_id := merchant_rec.types_id;
+			status := merchant_rec.status;
+			return next;
+		end if;
+	end loop;
+end;	
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.merchant_nearby(int4,int4,float8,float8,float8) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.merchant_nearby(int4,int4,float8,float8,float8) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.parkingspace_nearby(userlat double precision, userlon double precision, distance double precision)
+ RETURNS TABLE(id bigint, lat double precision, lon double precision, name text, address text, nearby text, is_checkin boolean)
+ LANGUAGE plpgsql
+AS $function$
+declare
+	parkingspace_rec record;
+	near double precision;
+	count int4;
+begin
+	for parkingspace_rec in (
+		select distinct ps.id, ps.latitude, ps.longitude, ps.name, ps.address from parking_space ps 
+		left join parking_space_sales pss on ps.id = pss.parking_space_id where 
+		ps.deleted_at is null
+		and pss.end_date >= now() 
+	) 
+	loop 
+		near = distance(userlat,userlon,parkingspace_rec.latitude,parkingspace_rec.longitude);
+		if near <= distance then 
+			id := parkingspace_rec.id;
+			lat := parkingspace_rec.latitude;
+			lon := parkingspace_rec.longitude;
+			name := parkingspace_rec.name;
+			address := parkingspace_rec.address;
+			nearby := concat(to_char(near,'FM90.99'),' KM');
+			count = public.count_checkin(parkingspace_rec.id);
+			if count > 0 then
+				is_checkin := true;
+			else
+				is_checkin := false;
+			end if;
+			return next;
+		end if;
+	end loop;
+end;	
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.parkingspace_nearby(float8,float8,float8) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.parkingspace_nearby(float8,float8,float8) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.r_trx(merchantid integer, months text, years text)
+ RETURNS TABLE(dates text, times text, product_name text, user_name text, qty smallint, total_tax double precision, grand_total double precision, status text, trx_id text, id bigint, order_no text, bill_no text, external_id text, type_order text)
+ LANGUAGE plpgsql
+AS $function$
+begin
+	if months = '0' and years = '0' then 
+		return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, tops.name as product_name, muu.name as user_name, tops.qty, 
+		tob.total_tax, tops.price * tops.qty as grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.id = tob.trx_order_id 
+		left join trx_order_product_sales tops on tob.id = tops.trx_order_bill_id 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		order by dates, times asc;
+	elsif months = '0' then   
+	    return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, tops.name as product_name, muu.name as user_name, tops.qty, 
+		tob.total_tax, tops.price * tops.qty as grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.id = tob.trx_order_id 
+		left join trx_order_product_sales tops on tob.id = tops.trx_order_bill_id 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		and TO_CHAR(t.created_at, 'yyyy') = years
+		order by dates, times asc;
+	elsif years = '0' then   
+	    return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, tops.name as product_name, muu.name as user_name, tops.qty, 
+		tob.total_tax, tops.price * tops.qty as grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.id = tob.trx_order_id 
+		left join trx_order_product_sales tops on tob.id = tops.trx_order_bill_id 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		and TO_CHAR(t.created_at, 'mm') = months
+		order by dates, times asc;
+	else 
+	    return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, tops.name as product_name, muu.name as user_name, tops.qty, 
+		tob.total_tax, tops.price * tops.qty as grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.id = tob.trx_order_id 
+		left join trx_order_product_sales tops on tob.id = tops.trx_order_bill_id 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		and TO_CHAR(t.created_at, 'mm') = months
+		and TO_CHAR(t.created_at, 'yyyy') = years
+		order by dates, times asc;
+	 end if; 
+	end;
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.r_trx(int4,text,text) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.r_trx(int4,text,text) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.report_transaction(merchantid integer, months text, years text)
+ RETURNS TABLE(dates text, times text, product_name text, user_name text, qty smallint, total_tax double precision, grand_total double precision, status text, trx_id text, id bigint, order_no text, bill_no text, external_id text, type_order text)
+ LANGUAGE plpgsql
+AS $function$
+begin
+	if months = '0' and years = '0' then 
+		return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, tops.name as product_name, muu.name as user_name, tops.qty, 
+		tob.total_tax, tops.price * tops.qty as grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.id = tob.trx_order_id 
+		left join trx_order_product_sales tops on tob.id = tops.trx_order_bill_id 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		order by dates, times asc;
+	elsif months = '0' then   
+	    return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, tops.name as product_name, muu.name as user_name, tops.qty, 
+		tob.total_tax, tops.price * tops.qty as grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.id = tob.trx_order_id 
+		left join trx_order_product_sales tops on tob.id = tops.trx_order_bill_id 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		and TO_CHAR(t.created_at, 'yyyy') = years
+		order by dates, times asc;
+	elsif years = '0' then   
+	    return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, tops.name as product_name, muu.name as user_name, tops.qty, 
+		tob.total_tax, tops.price * tops.qty as grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.id = tob.trx_order_id 
+		left join trx_order_product_sales tops on tob.id = tops.trx_order_bill_id 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		and TO_CHAR(t.created_at, 'mm') = months
+		order by dates, times asc;
+	else 
+	    return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, tops.name as product_name, muu.name as user_name, tops.qty, 
+		tob.total_tax, tops.price * tops.qty as grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.id = tob.trx_order_id 
+		left join trx_order_product_sales tops on tob.id = tops.trx_order_bill_id 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		and TO_CHAR(t.created_at, 'mm') = months
+		and TO_CHAR(t.created_at, 'yyyy') = years
+		order by dates, times asc;
+	 end if; 
+	end;
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.report_transaction(int4,text,text) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.report_transaction(int4,text,text) TO your-username-db;
+
+CREATE OR REPLACE FUNCTION public.report_transaction_single(merchantid integer, months text, years text)
+ RETURNS TABLE(dates text, times text, user_name text, total_tax double precision, grand_total double precision, status text, trx_id text, id bigint, order_no text, bill_no text, external_id text, type_order text)
+ LANGUAGE plpgsql
+AS $function$
+begin
+	if months = '0' and years = '0' then 
+		return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, muu.name as user_name, 
+		SUM(tob.total_tax) as total_tax, tor.grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.bill_no = tob.bill_no 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		group by tob.bill_no, t.created_at, muu.name, tor.grand_total, t.status, tor.trx_id, tor.id 
+		order by dates, times asc;
+	elsif months = '0' then   
+	    return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, muu.name as user_name, 
+		SUM(tob.total_tax) as total_tax, tor.grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.bill_no = tob.bill_no 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		and TO_CHAR(t.created_at, 'yyyy') = years
+		group by tob.bill_no, t.created_at, muu.name, tor.grand_total, t.status, tor.trx_id, tor.id 
+		order by dates, times asc;
+	elsif years = '0' then   
+	    return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, muu.name as user_name, 
+		SUM(tob.total_tax) as total_tax, tor.grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.bill_no = tob.bill_no 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		and TO_CHAR(t.created_at, 'mm') = months
+		group by tob.bill_no, t.created_at, muu.name, tor.grand_total, t.status, tor.trx_id, tor.id 
+		order by dates, times asc;
+	else 
+	    return query
+		select TO_CHAR(t.created_at, 'yyyy-mm-dd') dates, TO_CHAR(t.created_at, 'HH24:MI:SS') as times, muu.name as user_name, 
+		SUM(tob.total_tax) as total_tax, tor.grand_total, t.status, tor.trx_id, tor.id, tor.order_no, tor.bill_no, tor.type_payment::text as external_id, tor.type_order::text 
+		from trx t
+		left join trx_order tor on t.id = tor.trx_id  
+		left join trx_order_bill tob on tor.bill_no = tob.bill_no 
+		left join (
+			select mu.id, name, merchant_id 
+			from users u 
+		    left join merchant_users mu on u.id = mu.users_id 
+		) muu on tor.merchant_users_id  = muu.id
+		where muu.merchant_id = merchantId
+		and TO_CHAR(t.created_at, 'mm') = months
+		and TO_CHAR(t.created_at, 'yyyy') = years
+		group by tob.bill_no, t.created_at, muu.name, tor.grand_total, t.status, tor.trx_id, tor.id 
+		order by dates, times asc;
+	 end if; 
+	end;
+$function$
+;
+
+-- Permissions
+
+ALTER FUNCTION public.report_transaction_single(int4,text,text) OWNER TO "your-username-db";
+GRANT ALL ON FUNCTION public.report_transaction_single(int4,text,text) TO your-username-db;
+
+
+-- Permissions
+
+GRANT ALL ON SCHEMA public TO "your-username-db";
+GRANT ALL ON SCHEMA public TO public;
